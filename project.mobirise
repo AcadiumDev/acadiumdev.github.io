@@ -1,0 +1,1034 @@
+{
+  "settings": {
+    "currentPage": "help.html",
+    "theme": {
+      "name": "insightamp",
+      "title": "InsightAMP",
+      "styling": {
+        "primaryColor": "#ff5500",
+        "secondaryColor": "#ff5500",
+        "successColor": "#365c9a",
+        "infoColor": "#e96188",
+        "warningColor": "#fac769",
+        "dangerColor": "#b2ccd2",
+        "mainFont": "Lexend Deca",
+        "display1Font": "Lexend Deca",
+        "display1Size": 6,
+        "display2Font": "Lexend Deca",
+        "display2Size": 3.2,
+        "display5Font": "Lexend Deca",
+        "display5Size": 1.6,
+        "display7Font": "Lexend Deca",
+        "display7Size": 1.1,
+        "display4Font": "Lexend Deca",
+        "display4Size": 0.9,
+        "isRoundedButtons": false,
+        "isScrollToTopButton": false,
+        "isUnderlineLink": true,
+        "arrowColor": "@primaryColor"
+      },
+      "titlePreset": "Brand Agency",
+      "nameSelectPreset": "brandagency"
+    },
+    "path": "@PROJECT_PATH@",
+    "name": "Acadium",
+    "versionFirst": "4.12.0",
+    "siteFonts": [
+      {
+        "css": "'Lexend Deca', sans-serif",
+        "name": "Lexend Deca",
+        "url": "https://fonts.googleapis.com/css?family=Lexend+Deca:400"
+      }
+    ],
+    "imageResize": true,
+    "uniqCompNum": 5,
+    "versionPublish": "4.12.0",
+    "cookiesAlert": {
+      "customDialogSelector": false,
+      "colorText": "#424a4d",
+      "colorBg": "#eaeff1",
+      "colorButton": "",
+      "colorLink": "#424a4d",
+      "underlineLink": true,
+      "opacity": "99",
+      "opacityOverlay": "80",
+      "text": "We use cookies to give you the best matching experience.",
+      "textButton": "Agree"
+    },
+    "favicon": false,
+    "canonical-url": false,
+    "robotsSwitcher": false,
+    "sitemapSwitcher": false,
+    "sitemapSwitcherAuto": false,
+    "siteUrl": false,
+    "gdpr": false
+  },
+  "pages": {
+    "page1.html": {
+      "settings": {
+        "title": "Mentors",
+        "order": 2
+      },
+      "components": [
+        {
+          "alias": false,
+          "_styles": {
+            "background-color": "@menuBgColor",
+            "overflow": "visible",
+            ".navbar": {
+              "background": "@menuBgColor"
+            },
+            "& when not (@showBrand) and not (@showLogo)": {
+              ".navbar > .container, .navbar > .container-fluid": {
+                "justify-content": "flex-end !important"
+              }
+            },
+            "& when (@showLogo)": {
+              ".navbar-brand": {
+                ".navbar-logo": {
+                  "max-height": "60px",
+                  "min-width": "30px",
+                  "max-width": "60px",
+                  "amp-img, img": {
+                    "object-fit": "contain!important"
+                  }
+                }
+              }
+            },
+            "a": {
+              "&:before": {
+                "content": "none"
+              }
+            },
+            ".dropdown-item, .nav-link, .navbar-caption": {
+              "&:hover, &:active": {
+                "color": "@secondaryColor !important"
+              }
+            },
+            "& when (@showBrand)": {
+              ".navbar-caption": {
+                "line-height": "inherit !important"
+              }
+            },
+            ".navbar .navbar-collapse": {
+              "@media (max-width: 991px)": {
+                "background": "@menuBgColor",
+                "& when (@sidebarSide = 'left')": {
+                  "right": "auto",
+                  "left": "0"
+                }
+              }
+            },
+            "& when (@showItems)": {
+              ".nav-link": {
+                "margin": ".667em 1em !important",
+                "padding": "0 !important"
+              },
+              ".dropdown-item.active, .dropdown-item:active": {
+                "background-color": "transparent"
+              },
+              ".dropdown-menu": {
+                "background": "@menuBgColor"
+              }
+            },
+            ".hamburger span": {
+              "background-color": "@hamburgerColor"
+            },
+            ".builder-sidebar": {
+              "background-color": "@menuBgColor"
+            },
+            ".close-sidebar": {
+              "&:focus": {
+                "outline": "2px auto @primaryColor"
+              },
+              "span": {
+                "background-color": "@hamburgerColor"
+              }
+            },
+            "& when (@showSocial)": {
+              "& when (@showItems)": {
+                ".menu-social-list": {
+                  "@media (min-width: 992px)": {
+                    "padding-left": "1rem"
+                  },
+                  "@media (max-width: 991px)": {
+                    "padding-top": ".5rem"
+                  }
+                }
+              },
+              "& when (@showButtons)": {
+                ".menu-social-list": {
+                  "@media (max-width: 991px)": {
+                    "padding-bottom": ".5rem"
+                  }
+                }
+              }
+            },
+            ".iconfont-wrapper": {
+              "height": "1.3rem",
+              "width": "1.3rem",
+              "display": "inline-block",
+              ".amp-iconfont": {
+                "vertical-align": "middle",
+                "font-size": "1.3rem",
+                "width": "1.3rem"
+              }
+            }
+          },
+          "_name": "menu1",
+          "_customHTML": "<section class=\"menu1 menu horizontal-menu\" group=\"Menu\" plugins=\"DropDown, amp-main, amp-sidebar\" always-top=\"\" global=\"\" once=\"menu\">\n\t<mbr-parameters>\n\t\t<!-- Block parameters controls (Blue \"Gear\" panel) -->\n\t\t<!--  -->\n\t\t<header>Size</header>\n\t\t<input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n\t\t<input type=\"checkbox\" title=\"Sticky Position\" name=\"sticky\" checked=\"\">\n\t\t<!--  -->\n\t\t<header>Show/Hide</header>\n\t\t<input type=\"checkbox\" title=\"Show Logo\" name=\"showLogo\" checked=\"\">\n\t\t<input type=\"checkbox\" title=\"Show Brand Name\" name=\"showBrand\">\n\t\t<input type=\"checkbox\" title=\"Show Menu Items\" name=\"showItems\" checked=\"\">\n\t\t<input type=\"checkbox\" title=\"Show Button(s)\" name=\"showButtons\">\n\t\t<input type=\"checkbox\" title=\"Show Social\" name=\"showSocial\">\n\t\t<input type=\"range\" inline=\"\" title=\"Icons Count\" name=\"socialCount\" min=\"1\" max=\"6\" value=\"2\" step=\"1\" condition=\"showSocial\">\n\t\t<header>Sidebar</header>\n\t\t<select title=\"Side\" name=\"sidebarSide\">\n\t\t\t<option value=\"left\">Left</option>\n\t\t\t<option value=\"right\" selected=\"\">Right</option>\n\t\t</select>\n\t\t<input type=\"color\" title=\"Hamburger Color\" name=\"hamburgerColor\" value=\"#232323\">\n\t\t<header>Background</header>\n\t\t<input type=\"color\" title=\"Background Color\" name=\"menuBgColor\" value=\"#ffffff\" required=\"\">\n\t\t<!-- End block parameters -->\n\t</mbr-parameters>\n\t<!-- <div class=\"menu-wrapper\"> -->\n\t<nav class=\"navbar navbar-dropdown navbar-expand-lg\" mbr-class=\"{'navbar-fixed-top': sticky}\">\n\t\t<div class=\"menu-container\" mbr-class=\"{'container': !fullWidth,\n\t\t\t\t\t\t'container-fluid': fullWidth,\n\t\t\t\t\t\t'mbr-jc-e': !showLogo &amp;&amp; !showBrand}\">\n\t\t\t<!-- SHOW LOGO -->\n\t\t\t<div class=\"navbar-brand\" mbr-if=\"showLogo || showBrand\">\n\t\t\t\t<div mbr-if=\"showLogo\" class=\"navbar-logo\">\n\t\t\t\t\t<amp-img src=\"@PROJECT_PATH@/assets/images/acadium-primarylogo-red-1-120x25.png\" layout=\"responsive\" height=\"50\" width=\"240\" alt=\"image\" class=\"placeholder-loader\">\n\t\t\t\t\t\t<div placeholder=\"\" class=\"placeholder\"></div>\n\t\t\t\t\t\t<img class=\"mbr-temp\" src=\"@PROJECT_PATH@/assets/images/acadium-primarylogo-red-1-120x25.png\" alt=\"\" title=\"\">\n\t\t\t\t\t</amp-img>\n\t\t\t\t</div>\n\t\t\t\t<span mbr-if=\"showBrand\" mbr-buttons=\"\" mbr-theme-style=\"display-5\" class=\"navbar-caption-wrap\" data-toolbar=\"-mbrBtnMove,-mbrBtnAdd,-mbrBtnRemove\"><a class=\"navbar-caption mbr-semibold text-black\" data-app-selector=\".navbar-caption\" href=\"https://mobiri.se\" data-app-placeholder=\"Type Text\"></a></span>\n\t\t\t</div>\n\t\t\t<!-- SHOW LOGO END -->\n\t\t\t<!-- COLLAPSED MENU -->\n\t\t\t<div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\n\t\t\t\t<button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarNavAltMarkup\" aria-expanded=\"false\" aria-label=\"Toggle navigation\" mbr-if=\"showItems || showSocial || showButtons\">\n\t\t\t\t\t<div class=\"hamburger\">\n\t\t\t\t\t\t<span></span>\n\t\t\t\t\t\t<span></span>\n\t\t\t\t\t\t<span></span>\n\t\t\t\t\t\t<span></span>\n\t\t\t\t\t</div>\n\t\t\t\t</button>\n\t\t\t\t<!-- NAVBAR ITEMS -->\n\t\t\t\t<ul mbr-menu=\"\" class=\"navbar-nav nav-dropdown\" mbr-theme-style=\"display-7\" mbr-if=\"showItems\" mbr-class=\"{'nav-right': !showButtons,'navbar-nav-top-padding': isPublish &amp;&amp; !showBrand &amp;&amp; !showLogo}\"><li class=\"nav-item\"><a class=\"nav-link mbr-semibold link text-black\" href=\"https://mobiri.se\" data-app-selector=\".nav-link,.dropdown-item\" data-app-placeholder=\"Type Text\">Mentors</a></li>\n\t\t\t\t\t<li class=\"nav-item\">\n\t\t\t\t\t\t<a class=\"nav-link mbr-semibold link text-black\" href=\"https://mobiri.se\" data-app-selector=\".nav-link,.dropdown-item\" data-app-placeholder=\"Type Text\">Mentees</a>\n\t\t\t\t\t</li>\n\t\t\t\t\t\n\n\n\t\t\t\t\t<li class=\"nav-item\">\n\t\t\t\t\t\t<a class=\"nav-link mbr-semibold link text-black\" href=\"https://acadium.com/blog/\" data-app-selector=\".nav-link,.dropdown-item\" data-app-placeholder=\"Type Text\" target=\"_blank\">Blog</a>\n\t\t\t\t\t</li>\n\t\t\t\t\t<li class=\"nav-item\"><a class=\"nav-link mbr-semibold link text-black\" href=\"https://mobiri.se\" data-app-selector=\".nav-link,.dropdown-item\" data-app-placeholder=\"Type Text\">Help</a></li></ul>\n\t\t\t\t<!-- NAVBAR ITEMS END -->\n\t\t\t\t<!-- SOCIAL ICON -->\n\t\t\t\t<div class=\"menu-social-list\" mbr-if=\"showSocial\" mbr-list=\"\" mbr-list-grow=\"socialCount\" mbr-link-type=\"socials\">\n\t\t\t\t\t<a href=\"https://twitter.com/8bsite\" target=\"_blank\" class=\"iconfont-wrapper\">\n\t\t\t\t\t\t<span mbr-icon=\"\" class=\"amp-iconfont animation-normal fa-twitter-square fa\"></span>\n\t\t\t\t\t</a>\n\t\t\t\t\t<a href=\"https://www.facebook.com/8bsite/\" target=\"_blank\" class=\"iconfont-wrapper\">\n\t\t\t\t\t\t<span mbr-icon=\"\" class=\"amp-iconfont animation-normal fa-instagram fa\"></span>\n\t\t\t\t\t</a>\n\n\n\n\t\t\t\t</div>\n\t\t\t\t<!-- SOCIAL ICON END -->\n\t\t\t\t<!-- SHOW BUTTON -->\n\t\t\t\t<div mbr-if=\"showButtons\" mbr-buttons=\"\" mbr-theme-style=\"display-7\" class=\"navbar-buttons mbr-section-btn\"><a class=\"btn btn-md btn-black mbr-semibold\" href=\"https://mobiri.se\" data-app-placeholder=\"Type Text\">Shop\n\t\t\t\t\t\tNow</a></div>\n\t\t\t\t<!-- SHOW BUTTON END -->\n\t\t\t</div>\n\t\t\t<!-- COLLAPSED MENU END -->\n\t\t\t<button class=\"navbar-toggler hide\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarNavAltMarkup\" aria-expanded=\"false\" aria-label=\"Toggle navigation\" mbr-if=\"showItems || showSocial || showButtons\">\n\t\t\t\t<div class=\"hamburger\">\n\t\t\t\t\t<span></span>\n\t\t\t\t\t<span></span>\n\t\t\t\t\t<span></span>\n\t\t\t\t\t<span></span>\n\t\t\t\t</div>\n\t\t\t</button>\n\t\t\t<button on=\"tap:sidebar.toggle\" class=\"ampstart-btn hamburger\" mbr-if=\"(showItems||showButtons)\">\n\t\t\t\t<span></span>\n\t\t\t\t<span></span>\n\t\t\t\t<span></span>\n\t\t\t\t<span></span>\n\t\t\t</button>\n\t\t</div>\n\t</nav>\n\t<!-- AMP plug -->\n\t<amp-sidebar id=\"sidebar\" layout=\"nodisplay\" side=\"{{sidebarSide}}\">\n\t\t<div class=\"builder-sidebar\" id=\"builder-sidebar\">\n\t\t\t<button on=\"tap:sidebar.close\" class=\"close-sidebar\">\n\t\t\t\t<span></span>\n\t\t\t\t<span></span>\n\t\t\t</button>\n\t\t</div>\n\t</amp-sidebar>\n\t<!-- </div> -->\n</section>",
+          "_cid": "rBL9b14tv4",
+          "_protectedParams": [],
+          "_global": true,
+          "_once": "menu",
+          "_params": {},
+          "_anchor": "menu1-0"
+        },
+        {
+          "_customTemplate": true,
+          "_afterNavbarItem": false,
+          "_customHTML": "\n\n\n\n\t\n<meta charset=\"UTF-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n<link rel=\"profile\" href=\"https://gmpg.org/xfn/11\">\n<title>Acadium - Digital Apprenticeships to Grow Your Skills or Business</title>\n\n<!-- Google Tag Manager for WordPress by gtm4wp.com -->\n[JS_CODE_0]\n<!-- End Google Tag Manager for WordPress by gtm4wp.com -->\n<!-- This site is optimized with the Yoast SEO plugin v13.0 - https://yoast.com/wordpress/plugins/seo/ -->\n<meta name=\"description\" content=\"Get the support you need to achieve your professional goals with an Acadium apprenticeship.\">\n<meta name=\"robots\" content=\"max-snippet:-1, max-image-preview:large, max-video-preview:-1\">\n<link rel=\"canonical\" href=\"https://acadium.com/\">\n<meta property=\"og:locale\" content=\"en_US\">\n<meta property=\"og:type\" content=\"website\">\n<meta property=\"og:title\" content=\"Acadium - Digital Apprenticeships to Grow Your Skills or Business\">\n<meta property=\"og:description\" content=\"Get the support you need to achieve your professional goals with an Acadium apprenticeship.\">\n<meta property=\"og:url\" content=\"https://acadium.com/\">\n<meta property=\"og:site_name\" content=\"Acadium\">\n<meta property=\"og:image\" content=\"https://acadium.com/wp-content/uploads/2020/05/acadium-open-graph-image.jpg\">\n<meta property=\"og:image:secure_url\" content=\"https://acadium.com/wp-content/uploads/2020/05/acadium-open-graph-image.jpg\">\n<meta property=\"og:image:width\" content=\"1200\">\n<meta property=\"og:image:height\" content=\"630\">\n<meta name=\"twitter:card\" content=\"summary_large_image\">\n<meta name=\"twitter:description\" content=\"Get the support you need to achieve your professional goals with an Acadium apprenticeship.\">\n<meta name=\"twitter:title\" content=\"Acadium - Digital Apprenticeships to Grow Your Skills or Business\">\n<meta name=\"twitter:site\" content=\"@AcadiumOfficial\">\n<meta name=\"twitter:image\" content=\"https://acadium.com/wp-content/uploads/2020/05/acadium-open-graph-image.jpg\">\n<meta name=\"twitter:creator\" content=\"@AcadiumOfficial\">\n[JS_CODE_1]\n<!-- / Yoast SEO plugin. -->\n\n<link rel=\"dns-prefetch\" href=\"//fonts.googleapis.com\">\n<link rel=\"dns-prefetch\" href=\"//s.w.org\">\n<link href=\"https://fonts.gstatic.com\" crossorigin=\"\" rel=\"preconnect\">\n<link rel=\"alternate\" type=\"application/rss+xml\" title=\"Acadium » Feed\" href=\"https://acadium.com/feed/\">\n<link rel=\"alternate\" type=\"application/rss+xml\" title=\"Acadium » Comments Feed\" href=\"https://acadium.com/comments/feed/\">\n\t\t[JS_CODE_2]\n\t\t<style type=\"text/css\">img.wp-smiley,img.emoji{display:inline!important;border:none!important;box-shadow:none!important;height:1em!important;width:1em!important;margin:0 .07em!important;vertical-align:-.1em!important;background:none!important;padding:0!important}</style>\n\t<link rel=\"stylesheet\" id=\"fl-builder-layout-4236-css\" href=\"https://acadium.com/wp-content/uploads/bb-plugin/cache/4236-layout.css?ver=43f909c525220e8ef1ddffb5289e682e\" type=\"text/css\" media=\"all\">\n<link rel=\"stylesheet\" id=\"cookie-law-info-css\" href=\"https://acadium.com/wp-content/plugins/cookie-law-info/public/css/cookie-law-info-public.css?ver=1.8.7\" type=\"text/css\" media=\"all\">\n<link rel=\"stylesheet\" id=\"cookie-law-info-gdpr-css\" href=\"https://acadium.com/wp-content/plugins/cookie-law-info/public/css/cookie-law-info-gdpr.css?ver=1.8.7\" type=\"text/css\" media=\"all\">\n<link rel=\"stylesheet\" id=\"bodhi-svgs-attachment-css\" href=\"https://acadium.com/wp-content/plugins/svg-support/css/svgs-attachment.css?ver=5.3.2\" type=\"text/css\" media=\"all\">\n<link rel=\"stylesheet\" id=\"font-awesome-5-css\" href=\"https://acadium.com/wp-content/plugins/bb-plugin/fonts/fontawesome/5.12.0/css/all.min.css?ver=2.3.1.1\" type=\"text/css\" media=\"all\">\n<link rel=\"stylesheet\" id=\"fl-builder-layout-bundle-4999906694724438386d29740486e01a-css\" href=\"https://acadium.com/wp-content/uploads/bb-plugin/cache/4999906694724438386d29740486e01a-layout-bundle.css?ver=2.3.1.1-1.2.5\" type=\"text/css\" media=\"all\">\n<link rel=\"stylesheet\" id=\"testimonial-rotator-style-css\" href=\"https://acadium.com/wp-content/plugins/testimonial-rotator/testimonial-rotator-style.css?ver=5.3.2\" type=\"text/css\" media=\"all\">\n<link rel=\"stylesheet\" id=\"font-awesome-css\" href=\"https://acadium.com/wp-content/plugins/bb-plugin/fonts/fontawesome/5.12.0/css/v4-shims.min.css?ver=2.3.1.1\" type=\"text/css\" media=\"all\">\n<link rel=\"stylesheet\" id=\"spf-google-web-fonts-_sptp_generator-css\" href=\"//fonts.googleapis.com/css?family=Open%20Sans:600|Open%20Sans:600|Open%20Sans|Open%20Sans:300|Open%20Sans|Open%20Sans:400\" type=\"text/css\" media=\"all\">\n<link rel=\"stylesheet\" id=\"jquery-magnificpopup-css\" href=\"https://acadium.com/wp-content/plugins/bb-plugin/css/jquery.magnificpopup.min.css?ver=2.3.1.1\" type=\"text/css\" media=\"all\">\n<link rel=\"stylesheet\" id=\"bootstrap-4-css\" href=\"https://acadium.com/wp-content/themes/bb-theme/css/bootstrap-4.min.css?ver=1.7.4.1\" type=\"text/css\" media=\"all\">\n<link rel=\"stylesheet\" id=\"fl-automator-skin-css\" href=\"https://acadium.com/wp-content/uploads/bb-theme/skin-5f4d717f429a9.css?ver=1.7.4.1\" type=\"text/css\" media=\"all\">\n<link rel=\"stylesheet\" id=\"fl-child-theme-css\" href=\"https://acadium.com/wp-content/themes/bb-theme-child/style.css?ver=5.3.2\" type=\"text/css\" media=\"all\">\n<link rel=\"stylesheet\" id=\"fl-builder-google-fonts-1777778e79968ae2723a2bffd4a76f2b-css\" href=\"//fonts.googleapis.com/css?family=IBM+Plex+Serif%3A600%7CRoboto%3A500&amp;ver=5.3.2\" type=\"text/css\" media=\"all\">\n[JS_CODE_3]\n[JS_CODE_4]\n[JS_CODE_5]\n[JS_CODE_6]\n[JS_CODE_7]\n[JS_CODE_8]\n[JS_CODE_9]\n[JS_CODE_10]\n[JS_CODE_11]\n[JS_CODE_12]\n<link rel=\"EditURI\" type=\"application/rsd+xml\" title=\"RSD\" href=\"https://acadium.com/xmlrpc.php?rsd\">\n<link rel=\"wlwmanifest\" type=\"application/wlwmanifest+xml\" href=\"https://acadium.com/wp-includes/wlwmanifest.xml\"> \n<meta name=\"generator\" content=\"WordPress 5.3.2\">\n<link rel=\"shortlink\" href=\"https://acadium.com/\">\n<link rel=\"alternate\" type=\"application/json+oembed\" href=\"https://acadium.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Facadium.com%2F\">\n<link rel=\"alternate\" type=\"text/xml+oembed\" href=\"https://acadium.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Facadium.com%2F&amp;format=xml\">\n\t\t\t\t<style type=\"text/css\">@font-face{font-family:Circular\\ Book;src:url(https://acadium.com/wp-content/uploads/2019/11/CircularXXWeb-Book.woff2) format('woff2');font-display:auto}@font-face{font-family:Circular\\ medium;src:url(https://acadium.com/wp-content/uploads/2019/11/CircularXXWeb-Medium.woff2) format('woff2');font-display:auto}@font-face{font-family:Circular\\ bold;src:url(https://acadium.com/wp-content/uploads/2019/11/CircularXXWeb-Bold.woff2) format('woff2');font-display:auto}</style>\n\t\t\t\t\n<!-- Google Tag Manager for WordPress by gtm4wp.com -->\n[JS_CODE_13]\n[JS_CODE_14]\n<!-- End Google Tag Manager -->\n<!-- End Google Tag Manager for WordPress by gtm4wp.com -->\n\t\t[JS_CODE_15]\n\t\t<style type=\"text/css\" id=\"tve_global_variables\">:root{--tcb-color-0:#4f5354}</style><style type=\"text/css\" id=\"thrive-default-styles\"></style><link rel=\"icon\" href=\"https://acadium.com/wp-content/uploads/2019/11/cropped-favicon-2-1-32x32.png\" sizes=\"32x32\">\n<link rel=\"icon\" href=\"https://acadium.com/wp-content/uploads/2019/11/cropped-favicon-2-1-192x192.png\" sizes=\"192x192\">\n<link rel=\"apple-touch-icon-precomposed\" href=\"https://acadium.com/wp-content/uploads/2019/11/cropped-favicon-2-1-180x180.png\">\n<meta name=\"msapplication-TileImage\" content=\"https://acadium.com/wp-content/uploads/2019/11/cropped-favicon-2-1-270x270.png\">\n\t\t<style type=\"text/css\" id=\"wp-custom-css\">.link-card .link-card-cta a{text-decoration:none}</style>\n\t\t<!-- Global site tag (gtag.js) - Google Analytics -->\n[JS_CODE_16]\n[JS_CODE_17]\n<meta name=\"p:domain_verify\" content=\"e30c953e73e63b65afcc1cacfec104b4\">\n\n<!-- Calendly link widget begin -->\n<link href=\"https://calendly.com/assets/external/widget.css\" rel=\"stylesheet\">\n[JS_CODE_18]\n<!-- Calendly link widget end -->\n\n<!-- Facebook Pixel Code -->\n[JS_CODE_19]\n\n<!-- Snap Pixel Code -->\n[JS_CODE_20]\n<!-- End Snap Pixel Code -->\n\n<!-- LEADFEEDER -->\n[JS_CODE_21]\n\t\n[JS_CODE_22]\n\n\t\n\n\n\t\n<!-- Google Tag Manager (noscript) -->\n<noscript>&amp;lt;iframe src=\"https://www.googletagmanager.com/ns.html?id=GTM-NBJPPNQ\" height=\"0\" width=\"0\" style=\"display:none;visibility:hidden\"&amp;gt;&amp;lt;/iframe&amp;gt;</noscript>\n<!-- End Google Tag Manager (noscript) --><a aria-label=\"Skip to content\" class=\"fl-screen-reader-text\" href=\"#fl-main-content\">Skip to content</a><div class=\"fl-page\">\n\t<header class=\"fl-builder-content fl-builder-content-516 fl-builder-global-templates-locked\" data-post-id=\"516\" itemscope=\"itemscope\" itemtype=\"http://schema.org/WPHeader\" data-type=\"header\" data-sticky=\"1\" data-sticky-breakpoint=\"medium\" data-shrink=\"0\" data-overlay=\"0\" data-overlay-bg=\"transparent\"><div class=\"fl-row fl-row-full-width fl-row-bg-color fl-node-5dc1a2818fe54\" data-node=\"5dc1a2818fe54\">\n\t<div class=\"fl-row-content-wrap\">\n\t\t\t\t\t\t<div class=\"fl-row-content fl-row-fixed-width fl-node-content\">\n\t\t\n<div class=\"fl-col-group fl-node-5dc1a2818fe57 fl-col-group-equal-height fl-col-group-align-center fl-col-group-custom-width\" data-node=\"5dc1a2818fe57\">\n\t\t\t<div class=\"fl-col fl-node-5dc1a2818fe58 fl-col-small fl-col-small-full-width\" data-node=\"5dc1a2818fe58\">\n\t<div class=\"fl-col-content fl-node-content\">\n\t<div class=\"fl-module fl-module-photo fl-node-5dc1a2ad65a22 global-nav-logo\" data-node=\"5dc1a2ad65a22\">\n\t<div class=\"fl-module-content fl-node-content\">\n\t\t<div class=\"fl-photo fl-photo-align-left\" itemscope=\"\" itemtype=\"https://schema.org/ImageObject\">\n\t<div class=\"fl-photo-content fl-photo-img-png\">\n\t\t\t\t<a href=\"https://acadium.com/\" target=\"_self\" itemprop=\"url\">\n\t\t\t\t<img class=\"fl-photo-img wp-image-1427 size-full\" src=\"https://acadium.com/wp-content/uploads/2019/12/Acadium_PrimaryLogo_Red.png\" alt=\"Acadium | Accelerating Human Potential\" itemprop=\"image\" height=\"217\" width=\"1024\" title=\"Acadium-Logo-Red\" data-no-lazy=\"1\" srcset=\"https://acadium.com/wp-content/uploads/2019/12/Acadium_PrimaryLogo_Red.png 1024w, https://acadium.com/wp-content/uploads/2019/12/Acadium_PrimaryLogo_Red-300x64.png 300w, https://acadium.com/wp-content/uploads/2019/12/Acadium_PrimaryLogo_Red-768x163.png 768w\" sizes=\"(max-width: 1024px) 100vw, 1024px\">\n\t\t\t\t</a>\n\t\t\t\t\t</div>\n\t</div>\n\t</div>\n</div>\n\t</div>\n</div>\n\t\t\t<div class=\"fl-col fl-node-5dc1a2818fe59\" data-node=\"5dc1a2818fe59\">\n\t<div class=\"fl-col-content fl-node-content\">\n\t<div class=\"fl-module fl-module-menu fl-node-5dc1a2818fe5b\" data-node=\"5dc1a2818fe5b\">\n\t<div class=\"fl-module-content fl-node-content\">\n\t\t<div class=\"fl-menu fl-menu-responsive-toggle-medium-mobile fl-menu-responsive-flyout-overlay fl-flyout-right\">\n\t<button class=\"fl-menu-mobile-toggle hamburger\" aria-label=\"Menu\"><span class=\"svg-container\"><svg version=\"1.1\" class=\"hamburger-menu\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" viewBox=\"0 0 512 512\">\n<rect class=\"fl-hamburger-menu-top\" width=\"512\" height=\"102\"></rect>\n<rect class=\"fl-hamburger-menu-middle\" y=\"205\" width=\"512\" height=\"102\"></rect>\n<rect class=\"fl-hamburger-menu-bottom\" y=\"410\" width=\"512\" height=\"102\"></rect>\n</svg>\n</span></button>\t<div class=\"fl-clear\"></div>\n\t<nav aria-label=\"Menu\" itemscope=\"itemscope\" itemtype=\"https://schema.org/SiteNavigationElement\"><ul id=\"menu-global-navigation\" class=\"menu fl-menu-horizontal fl-toggle-none\"><li id=\"menu-item-695\" class=\"mega-menu menu-item menu-item-type-gs_sim menu-item-object-gs_sim menu-item-has-children fl-has-submenu\"><div class=\"fl-has-submenu-container\">\n<div class=\"menu-tl-link\">\n<span class=\"icon-label\">For Apprentices</span>\n<i class=\"icon i-menu-arrow\">\n<svg id=\"arrow-down\" width=\"11\" height=\"6\" viewBox=\"0 0 11 6\">\n  <g id=\"Pages\" fill=\"none\" fill-rule=\"evenodd\">\n    <g id=\"Home-Copy\" fill=\"#FD335A\" fill-rule=\"nonzero\" transform=\"translate(-995 -1966)\">\n      <path id=\"Path\" d=\"M998.212 1972.543a.882.882 0 1 0 1.34 1.149l3.53-4.118a.882.882 0 0 0 0-1.148l-3.53-4.118a.882.882 0 0 0-1.34 1.149l3.038 3.543-3.038 3.543z\" transform=\"rotate(90 1000.647 1969)\"></path>\n    </g>\n  </g>\n</svg>\n</i>\n</div>\n</div><ul class=\"sub-menu\">\t<li id=\"menu-item-689\" class=\"menu-item menu-item-type-gs_sim menu-item-object-gs_sim\"><a href=\"/get-a-mentor\" class=\"sub-menu-item\">\n<i class=\"icon i-40\">\n<svg id=\"apprenticeships\" width=\"40\" height=\"40\" viewBox=\"0 0 40 40\">\n  <path d=\"M38.3 14.7a13 13 0 0 0-25.8-2.2 13 13 0 1 0 15 15 13.1 13.1 0 0 0 10.8-12.8zM14.7 36.3a11.1 11.1 0 0 1-11-11 10.9 10.9 0 0 1 8.6-10.7 13 13 0 0 0 13 13h.1a10.9 10.9 0 0 1-10.7 8.7zm11-10.6h-.4a11 11 0 0 1-11-11v-.4h.4a11 11 0 0 1 11 11zm2-.3a13 13 0 0 0-13-13h-.1a10.9 10.9 0 0 1 10.7-8.7 11.1 11.1 0 0 1 11 11 10.9 10.9 0 0 1-8.6 10.7z\"></path>\n</svg>\n</i>\n<h2>Get a Mentor</h2>\n<p>Match with a business and apply your skills in a practical setting with an Acadium apprenticeship.</p>\n</a>\n</li>\t<li id=\"menu-item-684\" class=\"menu-item menu-item-type-gs_sim menu-item-object-gs_sim\"><a href=\"/courses\" class=\"sub-menu-item\">\n<i class=\"icon i-40\">\n<svg id=\"courses\" width=\"40\" height=\"40\" viewBox=\"0 0 40 40\">\n  <path d=\"M37 2H17a.9.9 0 0 0-1 1v9H3a.9.9 0 0 0-1 1v24a.9.9 0 0 0 1 1h24a.9.9 0 0 0 1-1V24h9a.9.9 0 0 0 1-1V3a.9.9 0 0 0-1-1zM26 36H4V14h12v9a.9.9 0 0 0 1 1h9zm0-14h-8v-8h8zm10 0h-8v-9a.9.9 0 0 0-1-1h-9V4h18z\"></path>\n</svg>\n</i>\n<h2>Courses</h2>\n<p>Learn new skills and build on existing ones with our collection of courses.</p>\n</a>\n</li>\t<li id=\"menu-item-690\" class=\"menu-item menu-item-type-gs_sim menu-item-object-gs_sim\"><a href=\"/acadium-plus\" class=\"sub-menu-item\">\n<i class=\"icon i-40\">\n<svg id=\"acadium-plus\" width=\"40\" height=\"40\" fill=\"none\" viewBox=\"0 0 40 40\">\n  <path d=\"M.996 29.2a.966.966 0 0 0 .966-.965v-5.902H5.61c1.484 0 2.767-.503 3.798-1.51 1.032-1.03 1.56-2.289 1.56-3.823 0-1.535-.528-2.793-1.56-3.799-1.031-1.031-2.314-1.534-3.798-1.534H.966a.966.966 0 0 0-.966.966v15.602c0 .533.432.966.966.966h.03zm.966-15.722h3.572c.981 0 1.812.327 2.466 1.006.679.68 1.006 1.51 1.006 2.516S8.679 18.836 8 19.515c-.654.68-1.485 1.007-2.466 1.007H1.962v-7.044z\"></path>\n  <path d=\"M14.496 29.2a.93.93 0 0 0 .93-.93V12.598a.93.93 0 1 0-1.862 0V28.27c.001.514.418.93.932.93z\"></path>\n  <path d=\"M18.18 24.295c0 3.32 2.113 5.207 5.232 5.207 3.22 0 5.409-1.962 5.409-5.383v-6.666a.93.93 0 0 0-1.862 0v6.64c0 2.39-1.333 3.674-3.471 3.674-2.139 0-3.447-1.258-3.447-3.648v-6.666a.93.93 0 0 0-1.862 0v6.842z\"></path>\n  <path d=\"M31.288 26.184c-.41.156-.648.603-.454.997.736 1.487 2.415 2.322 4.512 2.322 3.019 0 4.654-1.66 4.654-3.673 0-1.937-1.233-3.044-3.849-4.05-1.912-.73-2.767-1.258-2.767-2.29 0-1.031.805-1.635 1.987-1.635.669 0 1.209.199 1.628.588.345.32.844.497 1.262.282.42-.217.597-.74.31-1.117-.746-.976-1.826-1.463-3.225-1.463-2.239 0-3.824 1.408-3.824 3.345 0 1.837 1.132 2.793 3.447 3.698 1.182.478 2.012.88 2.465 1.208.478.327.704.805.704 1.434 0 .98-.704 1.937-2.792 1.937-1.268 0-2.214-.443-2.759-1.104-.318-.385-.833-.657-1.3-.48z\"></path>\n</svg>\n</i>\n<h2>Acadium Plus</h2>\n<p>Get better and faster outcomes through direct mentorship with CMO's and VP's from global brands, career coaching, and hands-on skills training.</p>\n</a></li></ul></li><li id=\"menu-item-696\" class=\"mega-menu menu-item menu-item-type-gs_sim menu-item-object-gs_sim menu-item-has-children fl-has-submenu\"><div class=\"fl-has-submenu-container\">\n<div class=\"menu-tl-link\">\n<span class=\"icon-label\">For Mentors</span>\n<i class=\"icon i-menu-arrow\">\n<svg id=\"arrow-down\" width=\"11\" height=\"6\" viewBox=\"0 0 11 6\">\n  <g id=\"Pages\" fill=\"none\" fill-rule=\"evenodd\">\n    <g id=\"Home-Copy\" fill=\"#FD335A\" fill-rule=\"nonzero\" transform=\"translate(-995 -1966)\">\n      <path id=\"Path\" d=\"M998.212 1972.543a.882.882 0 1 0 1.34 1.149l3.53-4.118a.882.882 0 0 0 0-1.148l-3.53-4.118a.882.882 0 0 0-1.34 1.149l3.038 3.543-3.038 3.543z\" transform=\"rotate(90 1000.647 1969)\"></path>\n    </g>\n  </g>\n</svg>\n</i>\n</div>\n</div><ul class=\"sub-menu\">\t<li id=\"menu-item-692\" class=\"menu-item menu-item-type-gs_sim menu-item-object-gs_sim\"><a href=\"/get-an-apprentice\" class=\"sub-menu-item\">\n<i class=\"icon i-40\">\n<svg id=\"user-plus\" width=\"40\" height=\"40\" viewBox=\"0 0 40 40\">\n  <path d=\"M20 24.2H7.9A7.9 7.9 0 0 0 0 32.1v3.4a.9.9 0 0 0 1 1 .9.9 0 0 0 1-1v-3.4a5.9 5.9 0 0 1 5.9-5.9H20a5.8 5.8 0 0 1 5.9 5.9v3.4a1 1 0 0 0 1 1 .9.9 0 0 0 1-1v-3.4a7.9 7.9 0 0 0-7.9-7.9z\"></path>\n  <path d=\"M14 19.3a7.9 7.9 0 0 0 0-15.8 7.9 7.9 0 0 0-8 7.9 8 8 0 0 0 8 7.9zm0-13.8a5.9 5.9 0 0 1 5.9 5.9A6 6 0 1 1 14 5.5z\"></path>\n  <path d=\"M39 17.3h-4.2v-4.2a.9.9 0 0 0-1-1 1 1 0 0 0-1 1v4.2h-4.2a1 1 0 0 0-1 1 1.1 1.1 0 0 0 1 1h4.2v4.2a1.1 1.1 0 0 0 1 1 1 1 0 0 0 1-1v-4.2H39a1 1 0 0 0 1-1 .9.9 0 0 0-1-1z\"></path>\n</svg>\n</i>\n<h2>Get an Apprentice</h2>\n<p>Get the help you need to grow your business.</p>\n</a></li>\t<li id=\"menu-item-1698\" class=\"menu-item menu-item-type-gs_sim menu-item-object-gs_sim\"><a href=\"/pricing\" class=\"sub-menu-item\">\n<i class=\"icon i-40\">\n<svg id=\"tag-40\" width=\"40\" height=\"40\" viewBox=\"0 0 40 40\">\n  <path d=\"M20.7 37.6a4.3 4.3 0 0 1-3.1-1.4L2.7 21.4a.9.9 0 0 1-.3-.7V3.4a1.1 1.1 0 0 1 1-1h17.3a1.5 1.5 0 0 1 .7.3l14.9 14.9a4.5 4.5 0 0 1 0 6.3L23.9 36.2a4.5 4.5 0 0 1-3.2 1.4zM4.4 20.3L19 34.8a2.5 2.5 0 0 0 1.7.8 2.5 2.5 0 0 0 1.8-.8l12.3-12.3a2.4 2.4 0 0 0 0-3.5L20.3 4.4H4.4zm31.2 2.9z\"></path>\n  <path d=\"M12.1 13.6a1.5 1.5 0 0 1 0-3 1.5 1.5 0 0 1 0 3z\"></path>\n</svg>\n</i>\n<h2>Pricing</h2>\n<p>Learn how credits work and choose a package that works for you.</p>\n</a>\n</li>\t<li id=\"menu-item-694\" class=\"menu-item menu-item-type-gs_sim menu-item-object-gs_sim\"><a href=\"/hire\" class=\"sub-menu-item\">\n<i class=\"icon i-40\">\n<svg id=\"target\" width=\"40\" height=\"40\" viewBox=\"0 0 40 40\">\n  <path d=\"M20 1.7A18.3 18.3 0 1 0 38.3 20 18.3 18.3 0 0 0 20 1.7zm0 34.6A16.3 16.3 0 1 1 36.3 20 16.3 16.3 0 0 1 20 36.3z\"></path>\n  <path d=\"M20 8.6A11.4 11.4 0 1 0 31.4 20 11.4 11.4 0 0 0 20 8.6zm0 20.8a9.4 9.4 0 1 1 9.4-9.4 9.4 9.4 0 0 1-9.4 9.4z\"></path>\n  <path d=\"M20 15.5a4.5 4.5 0 1 0 4.5 4.5 4.5 4.5 0 0 0-4.5-4.5zm0 7a2.5 2.5 0 1 1 2.5-2.5 2.5 2.5 0 0 1-2.5 2.5z\"></path>\n</svg>\n</i>\n<h2>Hire Full-Time</h2>\n<p>Find your next full time hire through exclusive access to top talent from Acadium's Accelerator program.</p>\n</a>\n</li></ul></li><li id=\"menu-item-5148\" class=\"menu-tl-link menu-tl-link-no-icon menu-item menu-item-type-post_type menu-item-object-page\"><a href=\"https://acadium.com/blog/\">Blog</a></li><li id=\"menu-item-700\" class=\"menu-tl-link menu-tl-link-no-icon menu-item menu-item-type-custom menu-item-object-custom\"><a href=\"https://app.acadium.com/login\">Log In</a></li><li id=\"menu-item-698\" class=\"menu-item menu-item-type-gs_sim menu-item-object-gs_sim\"><a href=\"https://app.acadium.com/signup\" class=\"button-nav fl-button\">Get started</a></li></ul></nav></div>\n\t</div>\n</div>\n\t</div>\n</div>\n\t</div>\n\t\t</div>\n\t</div>\n</div>\n</header>\t<div id=\"fl-main-content\" class=\"fl-page-content\" itemprop=\"mainContentOfPage\">\n\n\t\t\n<div class=\"fl-content-full container\">\n\t<div class=\"row\">\n\t\t<div class=\"fl-content col-md-12\">\n\t\t\t<article class=\"fl-post post-4236 page type-page status-publish has-post-thumbnail hentry\" id=\"fl-post-4236\" itemscope=\"itemscope\" itemtype=\"https://schema.org/CreativeWork\">\n\n\t\t\t<div class=\"fl-post-content clearfix\" itemprop=\"text\">\n\t\t<div class=\"fl-builder-content fl-builder-content-4236 fl-builder-content-primary fl-builder-global-templates-locked\" data-post-id=\"4236\"><div class=\"fl-row fl-row-full-width fl-row-bg-color fl-node-5ebedd6a9c6a9 hero hero-no-pattern hero-1-active\" data-node=\"5ebedd6a9c6a9\">\n\t<div class=\"fl-row-content-wrap\">\n\t\t\t\t\t\t<div class=\"fl-row-content fl-row-fixed-width fl-node-content\">\n\t\t\n<div class=\"fl-col-group fl-node-5ebedd6a9c69f fl-col-group-equal-height fl-col-group-align-top\" data-node=\"5ebedd6a9c69f\">\n\t\t\t<div class=\"fl-col fl-node-5ebedd6a9c6a2 fl-col-small fl-col-small-full-width fade-in col-md-6 col-lg-5 margin--bottom-3 margin--bottom-md-0\" data-node=\"5ebedd6a9c6a2\">\n\t<div class=\"fl-col-content fl-node-content\">\n\t<div class=\"fl-module fl-module-html fl-node-5ebedf719972e\" data-node=\"5ebedf719972e\">\n\t<div class=\"fl-module-content fl-node-content\">\n\t\t<div class=\"fl-html\">\n\t<div class=\"hero-nav margin--bottom-2 margin--bottom-md-3\">\n    <div class=\"toggle-container toggle-1-container margin--right-3\">\n        <button class=\"toggle toggle-1\" type=\"button\"><span>Get experience</span></button>\n    </div>\n    <div class=\"toggle-container toggle-2-container\">\n        <button class=\"toggle toggle-2\" type=\"button\"><span>Find talent</span></button>\n    </div>\n</div></div>\n\t</div>\n</div>\n<div class=\"fl-module fl-module-html fl-node-5ebee197b98a9\" data-node=\"5ebee197b98a9\">\n\t<div class=\"fl-module-content fl-node-content\">\n\t\t<div class=\"fl-html\">\n\t<div class=\"hero-container hero-1-container\">\n    <h1>Get professional experience in the real world</h1>\n    <p class=\"margin--bottom-3\">Apprentice under a mentor and gain new skills, work experience, and industry relationships. Entirely remote. Always free.</p>\n    <div class=\"button-large margin--bottom-1\">\n        <a class=\"fl-button\" href=\"https://app.acadium.com/signup/student\">Get a mentor</a>\n    </div>\n    <div class=\"animate-text\">\n\t\t<a class=\"text-link\" href=\"/get-a-mentor\">\n\t\t    <span>Learn more about getting a <span style=\"white-space: nowrap;\">mentor&nbsp;<i class=\"icon i-text-arrow\"></i></span></span>\n\t    </a>\n    </div>\n</div>\n\n<div class=\"hero-container hero-2-container\">\n    <h1>Find talent and get more done</h1>\n    <p class=\"margin--bottom-3\">Work remotely in an apprenticeship with vetted, emerging talent. One flat fee. Low risk.</p>\n    <div class=\"button-large margin--bottom-1\">\n        <a class=\"fl-button\" href=\"https://app.acadium.com/signup/business\">Get an apprentice</a>\n    </div>\n    <div class=\"animate-text\">\n\t\t<a class=\"text-link\" href=\"/get-an-apprentice\">\n\t\t    <span>Learn more about getting an <span style=\"white-space: nowrap;\">apprentice&nbsp;<i class=\"icon i-text-arrow\"></i></span></span>\n\t\t</a>\n    </div>\n</div></div>\n\t</div>\n</div>\n\t</div>\n</div>\n\t\t\t<div class=\"fl-col fl-node-5ec581d53cfac fl-col-small fl-col-small-full-width col-md-6 offset-lg-1\" data-node=\"5ec581d53cfac\">\n\t<div class=\"fl-col-content fl-node-content\">\n\t<div class=\"fl-module fl-module-html fl-node-5ec58420c7f58 fade-up fade-up--delayed\" data-node=\"5ec58420c7f58\">\n\t<div class=\"fl-module-content fl-node-content\">\n\t\t<div class=\"fl-html\">\n\t<div class=\"hero-photo-container\">\n    <div class=\"embed embed--3by4\">\n        <img class=\"embed-item hero-photo hero-1-photo\" src=\"https://acadium.com/wp-content/uploads/2020/05/hero-1-photo.jpg\" alt=\"Acadium apprentice\">\n        <img class=\"embed-item hero-photo hero-2-photo\" src=\"https://acadium.com/wp-content/uploads/2020/05/hero-photo-mentor.jpg\" alt=\"Acadium mentor\">\n    </div>\n</div></div>\n\t</div>\n</div>\n\t</div>\n</div>\n\t</div>\n\t\t</div>\n\t</div>\n</div>\n<section class=\"fl-row fl-row-fixed-width fl-row-bg-none fl-node-5ecbc04912b96 layout--margin-bottom relative\" data-node=\"5ecbc04912b96\">\n\t<div class=\"fl-row-content-wrap\">\n\t\t\t\t\t\t<div class=\"fl-row-content fl-row-fixed-width fl-node-content\">\n\t\t\n<div class=\"fl-col-group fl-node-5ecbc0491a67c\" data-node=\"5ecbc0491a67c\">\n\t\t\t<div class=\"fl-col fl-node-5ecbc0491a733 col-md-10 offset-md-1 zindex-1000\" data-node=\"5ecbc0491a733\">\n\t<div class=\"fl-col-content fl-node-content\">\n\t<div class=\"fl-module fl-module-heading fl-node-5ecc07a9b5afd h2\" data-node=\"5ecc07a9b5afd\">\n\t<div class=\"fl-module-content fl-node-content\">\n\t\t<h2 class=\"fl-heading\">\n\t\t<span class=\"fl-heading-text\">How Acadium apprenticeships work</span>\n\t</h2>\n\t</div>\n</div>\n<div class=\"fl-module fl-module-rich-text fl-node-5ecbc060f37af\" data-node=\"5ecbc060f37af\">\n\t<div class=\"fl-module-content fl-node-content\">\n\t\t<div class=\"fl-rich-text\">\n\t<p>For three months, apprentices help tackle their mentor’s business projects unpaid as part of their training. In exchange, the mentor provides feedback and guidance to help them improve.</p>\n</div>\n\t</div>\n</div>\n\t</div>\n</div>\n\t</div>\n\n<div class=\"fl-col-group fl-node-5ecee8df8ed3c\" data-node=\"5ecee8df8ed3c\">\n\t\t\t<div class=\"fl-col fl-node-5ecee8df8edcb\" data-node=\"5ecee8df8edcb\">\n\t<div class=\"fl-col-content fl-node-content\">\n\t<div class=\"fl-module fl-module-html fl-node-5ecee8df8ece9 fl-visible-desktop\" data-node=\"5ecee8df8ece9\">\n\t<div class=\"fl-module-content fl-node-content\">\n\t\t<div class=\"fl-html\">\n\t<div class=\"graphite-block-wrapper\">\n    <div class=\"graphite-block\"></div>\n</div></div>\n\t</div>\n</div>\n\t</div>\n</div>\n\t</div>\n\n<div class=\"fl-col-group fl-node-5ecc25453154d\" data-node=\"5ecc25453154d\">\n\t\t\t<div class=\"fl-col fl-node-5ecc254531a27 col-lg-10 offset-lg-1\" data-node=\"5ecc254531a27\">\n\t<div class=\"fl-col-content fl-node-content\">\n\t<div class=\"fl-module fl-module-html fl-node-5ecc2545314fa\" data-node=\"5ecc2545314fa\">\n\t<div class=\"fl-module-content fl-node-content\">\n\t\t<div class=\"fl-html\">\n\t<div class=\"embed embed-16by9 shadow-large video-wrapper\">\n    <video class=\"embed-item video\" id=\"video\" src=\"https://acadium.com/wp-content/uploads/2020/06/Acadium-Video-Demo_v2.mp4\" preload=\"true\" playsinline=\"\" autoplay=\"\" muted=\"\" loop=\"\"></video>\n</div></div>\n\t</div>\n</div>\n\t</div>\n</div>\n\t</div>\n\n<div class=\"fl-col-group fl-node-5ecc0a4e6c091\" data-node=\"5ecc0a4e6c091\">\n\t\t\t<div class=\"fl-col fl-node-5ecc0a4e6c13b fl-col-small fl-col-small-full-width margin--bottom-3 margin--bottom-lg-0\" data-node=\"5ecc0a4e6c13b\">\n\t<div class=\"fl-col-content fl-node-content\">\n\t<div class=\"fl-module fl-module-html fl-node-5ecc0a5e7f235\" data-node=\"5ecc0a5e7f235\">\n\t<div class=\"fl-module-content fl-node-content\">\n\t\t<div class=\"fl-html\">\n\t<button class=\"step--button\" id=\"step-1\" type=\"button\">\n    <div class=\"step--button-wrapper\">\n        <div class=\"step--button-circle margin--right-2\">\n            <div class=\"step--button-circle-group\">\n                <svg class=\"step--button-svg\" viewBox=\"0 0 48 48\">\n                    <circle class=\"outline-circle\" r=\"22\" cx=\"24\" cy=\"24\"></circle>\n                    <circle id=\"progress-circle-1\" class=\"progress-circle\" r=\"22\" cx=\"24\" cy=\"24\"></circle>\n                </svg>\n                <div class=\"step--button-number\">1</div>\n            </div>\n        </div>\n        <div class=\"step--button-details\" id=\"step-details-1\">\n            <h3 class=\"graphite-900 margin--bottom-1-2\">Build your profile</h3>\n            <p class=\"graphite-700 book paragraph--kilo\">Tell us about yourself and what you want to accomplish.</p>\n        </div>\n    </div>\n</button></div>\n\t</div>\n</div>\n\t</div>\n</div>\n\t\t\t<div class=\"fl-col fl-node-5ecc1ac3522ec fl-col-small fl-col-small-full-width margin--bottom-3 margin--bottom-lg-0\" data-node=\"5ecc1ac3522ec\">\n\t<div class=\"fl-col-content fl-node-content\">\n\t<div class=\"fl-module fl-module-html fl-node-5ecc1abe08dc9\" data-node=\"5ecc1abe08dc9\">\n\t<div class=\"fl-module-content fl-node-content\">\n\t\t<div class=\"fl-html\">\n\t<button class=\"step--button\" id=\"step-2\">\n    <div class=\"step--button-wrapper\">\n        <div class=\"step--button-circle margin--right-2\">\n             <div class=\"step--button-circle-group\">\n                <svg class=\"step--button-svg\" viewBox=\"0 0 48 48\">\n                    <circle class=\"outline-circle\" r=\"22\" cx=\"24\" cy=\"24\"></circle>\n                    <circle id=\"progress-circle-2\" class=\"progress-circle\" r=\"22\" cx=\"24\" cy=\"24\"></circle>\n                </svg>\n                <div class=\"step--button-number\">2</div>\n            </div>\n        </div>\n        <div class=\"step--button-details\" id=\"step-details-2\">\n            <h3 class=\"graphite-900 margin--bottom-1-2\">Find your match</h3>\n            <p class=\"graphite-700 book paragraph--kilo\">Chat and match with someone who shares your goals.</p>\n        </div>\n    </div>\n</button></div>\n\t</div>\n</div>\n\t</div>\n</div>\n\t\t\t<div class=\"fl-col fl-node-5ecc1acdd18f2 fl-col-small fl-col-small-full-width margin--bottom-3 margin--bottom-lg-0\" data-node=\"5ecc1acdd18f2\">\n\t<div class=\"fl-col-content fl-node-content\">\n\t<div class=\"fl-module fl-module-html fl-node-5ecc1acba79f6\" data-node=\"5ecc1acba79f6\">\n\t<div class=\"fl-module-content fl-node-content\">\n\t\t<div class=\"fl-html\">\n\t<button class=\"step--button\" id=\"step-3\">\n    <div class=\"step--button-wrapper\">\n        <div class=\"step--button-circle margin--right-2\">\n            <div class=\"step--button-circle-group\">\n                <svg class=\"step--button-svg\" viewBox=\"0 0 48 48\">\n                    <circle class=\"outline-circle\" r=\"22\" cx=\"24\" cy=\"24\"></circle>\n                    <circle id=\"progress-circle-3\" class=\"progress-circle\" r=\"22\" cx=\"24\" cy=\"24\"></circle>\n                </svg>\n                <div class=\"step--button-number\">3</div>\n            </div>\n        </div>\n        <div class=\"step--button-details\" id=\"step-details-3\">\n            <h3 class=\"graphite-900 margin--bottom-1-2\">Start your apprenticeship</h3>\n            <p class=\"graphite-700 book paragraph--kilo\">Work and succeed together during a 3-month apprenticeship.</p>\n        </div>\n    </div>\n</button></div>\n\t</div>\n</div>\n\t</div>\n</div>\n\t</div>\n\t\t</div>\n\t</div>\n</section>\n<div class=\"fl-row fl-row-fixed-width fl-row-bg-none fl-node-5ecc0848b9a8a\" data-node=\"5ecc0848b9a8a\">\n\t<div class=\"fl-row-content-wrap\">\n\t\t\t\t\t\t<div class=\"fl-row-content fl-row-fixed-width fl-node-content\">\n\t\t\n<div class=\"fl-col-group fl-node-5ecc0848cae2e\" data-node=\"5ecc0848cae2e\">\n\t\t\t<div class=\"fl-col fl-node-5ecc0848caee3\" data-node=\"5ecc0848caee3\">\n\t<div class=\"fl-col-content fl-node-content\">\n\t<div class=\"fl-module fl-module-separator fl-node-5ecc083103b52\" data-node=\"5ecc083103b52\">\n\t<div class=\"fl-module-content fl-node-content\">\n\t\t<div class=\"fl-separator\"></div>\n\t</div>\n</div>\n\t</div>\n</div>\n\t</div>\n\t\t</div>\n\t</div>\n</div>\n<div class=\"fl-row fl-row-fixed-width fl-row-bg-none fl-node-5ecc07ea22ed3\" data-node=\"5ecc07ea22ed3\">\n\t<div class=\"fl-row-content-wrap\">\n\t\t\t\t\t\t<div class=\"fl-row-content fl-row-fixed-width fl-node-content\">\n\t\t\n<div class=\"fl-col-group fl-node-5ecc07ea22f59\" data-node=\"5ecc07ea22f59\">\n\t\t\t<div class=\"fl-col fl-node-5ecc07ea22f5b col-md-10 offset-md-1\" data-node=\"5ecc07ea22f5b\">\n\t<div class=\"fl-col-content fl-node-content\">\n\t<div class=\"fl-module fl-module-heading fl-node-5ecc07ea22f5c h2\" data-node=\"5ecc07ea22f5c\">\n\t<div class=\"fl-module-content fl-node-content\">\n\t\t<h2 class=\"fl-heading\">\n\t\t<span class=\"fl-heading-text\">Building meaningful relationships</span>\n\t</h2>\n\t</div>\n</div>\n<div class=\"fl-module fl-module-rich-text fl-node-5ecc07ea22f5d\" data-node=\"5ecc07ea22f5d\">\n\t<div class=\"fl-module-content fl-node-content\">\n\t\t<div class=\"fl-rich-text\">\n\t<p>One platform. Thousands of stories.</p>\n</div>\n\t</div>\n</div>\n\t</div>\n</div>\n\t</div>\n\t\t</div>\n\t</div>\n</div>\n<section class=\"fl-row fl-row-full-width fl-row-bg-color fl-node-5ed5829032219 swipe-background swipe-background-right swipe-background-right-longer quote-bg\" data-node=\"5ed5829032219\">\n\t<div class=\"fl-row-content-wrap\">\n\t\t\t\t\t\t<div class=\"fl-row-content fl-row-fixed-width fl-node-content\">\n\t\t\n<div class=\"fl-col-group fl-node-5ed5829032211 fl-col-group-equal-height fl-col-group-align-center\" data-node=\"5ed5829032211\">\n\t\t\t<div class=\"fl-col fl-node-5ed5829032215 fl-col-small fl-col-small-full-width col-md-5\" data-node=\"5ed5829032215\">\n\t<div class=\"fl-col-content fl-node-content\">\n\t<div class=\"fl-module fl-module-html fl-node-5edfd2cfb4f67\" data-node=\"5edfd2cfb4f67\">\n\t<div class=\"fl-module-content fl-node-content\">\n\t\t<div class=\"fl-html\">\n\t<div class=\"hero-photo-container quote-photo-container hero-1-active\">\n    <div class=\"embed embed--8by10\">\n        <img class=\"embed-item hero-photo hero-1-quote-photo\" src=\"https://acadium.com/wp-content/uploads/2020/06/arielle.jpg\" alt=\"Arielle Strakhov\">\n        <img class=\"embed-item hero-photo hero-2-quote-photo\" src=\"https://acadium.com/wp-content/uploads/2020/06/jodi.jpg\" alt=\"Jodi-Kay Edwards\">\n    </div>\n</div></div>\n\t</div>\n</div>\n\t</div>\n</div>\n\t\t\t<div class=\"fl-col fl-node-5ed5829032214 fl-col-small fl-col-small-full-width col-md-6 offset-md-1\" data-node=\"5ed5829032214\">\n\t<div class=\"fl-col-content fl-node-content\">\n\t<div class=\"fl-module fl-module-html fl-node-5ed5829032216\" data-node=\"5ed5829032216\">\n\t<div class=\"fl-module-content fl-node-content\">\n\t\t<div class=\"fl-html\">\n\t<div class=\"blockquote hero-1-active\">\n    <blockquote class=\"hero-1-blockquote\">\n        <p class=\"blockquote--quote bold margin--bottom-2 medium\">My relationship with my mentor has been life changing. I'm now more confident in my skills and in myself.</p>\n        <footer>\n            <cite class=\"not-italic paragraph--kilo\">\n                <span class=\"block bold\">Arielle Strakhov</span>\n                <span class=\"block\">Acadium Apprentice</span>\n            </cite>\n        </footer>\n    </blockquote>\n    \n    <blockquote class=\"hero-2-blockquote\">\n        <p class=\"blockquote--quote bold margin--bottom-2 medium\">Acadium gave me the chance to take a step back, breathe, and use that time to become the entrepreneur I was striving to be.</p>\n        <footer>\n            <cite class=\"not-italic paragraph--kilo\">\n                <span class=\"block bold\">Jodi-Kay Edwards</span>\n                <span class=\"block\">Business Coach and Visibility Strategist</span>\n            </cite>\n        </footer>\n    </blockquote>\n</div></div>\n\t</div>\n</div>\n\t</div>\n</div>\n\t</div>\n\t\t</div>\n\t</div>\n</section>\n<div class=\"fl-row fl-row-fixed-width fl-row-bg-none fl-node-5ef0eebc39fc3 layout--padding layout--padding-large\" data-node=\"5ef0eebc39fc3\">\n\t<div class=\"fl-row-content-wrap\">\n\t\t\t\t\t\t<div class=\"fl-row-content fl-row-fixed-width fl-node-content\">\n\t\t\n<div class=\"fl-col-group fl-node-5ef0eebc2785f\" data-node=\"5ef0eebc2785f\">\n\t\t\t<div class=\"fl-col fl-node-5ef0eebc27864\" data-node=\"5ef0eebc27864\">\n\t<div class=\"fl-col-content fl-node-content\">\n\t<div class=\"fl-module fl-module-rich-text fl-node-5ef0eebc27865\" data-node=\"5ef0eebc27865\">\n\t<div class=\"fl-module-content fl-node-content\">\n\t\t<div class=\"fl-rich-text\">\n\t<p>Join teams around the world growing with Acadium.</p>\n</div>\n\t</div>\n</div>\n\t</div>\n</div>\n\t</div>\n\n<div class=\"fl-col-group fl-node-5ef0eebc27863\" data-node=\"5ef0eebc27863\">\n\t\t\t<div class=\"fl-col fl-node-5ef0eebc27866 fl-col-small fl-col-small-full-width col-md-4 col-lg-2 margin--bottom-3 margin--bottom-lg-0\" data-node=\"5ef0eebc27866\">\n\t<div class=\"fl-col-content fl-node-content\">\n\t<div class=\"fl-module fl-module-photo fl-node-5ef0eebc27879 trusted-by-logo\" data-node=\"5ef0eebc27879\">\n\t<div class=\"fl-module-content fl-node-content\">\n\t\t<div class=\"fl-photo fl-photo-align-center\" itemscope=\"\" itemtype=\"https://schema.org/ImageObject\">\n\t<div class=\"fl-photo-content fl-photo-img-png\">\n\t\t\t\t<a href=\"https://saltcaramels.com/\" target=\"_self\" itemprop=\"url\">\n\t\t\t\t<img class=\"fl-photo-img wp-image-4435 size-full\" src=\"https://acadium.com/wp-content/uploads/2020/05/helliemaes-1.png\" alt=\"helliemaes\" itemprop=\"image\" height=\"193\" width=\"640\" title=\"helliemaes\" srcset=\"https://acadium.com/wp-content/uploads/2020/05/helliemaes-1.png 640w, https://acadium.com/wp-content/uploads/2020/05/helliemaes-1-300x90.png 300w\" sizes=\"(max-width: 640px) 100vw, 640px\">\n\t\t\t\t</a>\n\t\t\t\t\t</div>\n\t</div>\n\t</div>\n</div>\n\t</div>\n</div>\n\t\t\t<div class=\"fl-col fl-node-5ef0eebc27867 fl-col-small fl-col-small-full-width col-md-4 col-lg-2 margin--bottom-3 margin--bottom-lg-0\" data-node=\"5ef0eebc27867\">\n\t<div class=\"fl-col-content fl-node-content\">\n\t<div class=\"fl-module fl-module-photo fl-node-5ef0eebc2787a trusted-by-logo\" data-node=\"5ef0eebc2787a\">\n\t<div class=\"fl-module-content fl-node-content\">\n\t\t<div class=\"fl-photo fl-photo-align-center\" itemscope=\"\" itemtype=\"https://schema.org/ImageObject\">\n\t<div class=\"fl-photo-content fl-photo-img-png\">\n\t\t\t\t<a href=\"https://startupslang.com/\" target=\"_self\" itemprop=\"url\">\n\t\t\t\t<img class=\"fl-photo-img wp-image-4436 size-full\" src=\"https://acadium.com/wp-content/uploads/2020/05/startupslang.png\" alt=\"Startup Slang Logo\" itemprop=\"image\" height=\"193\" width=\"640\" title=\"startupslang\" srcset=\"https://acadium.com/wp-content/uploads/2020/05/startupslang.png 640w, https://acadium.com/wp-content/uploads/2020/05/startupslang-300x90.png 300w\" sizes=\"(max-width: 640px) 100vw, 640px\">\n\t\t\t\t</a>\n\t\t\t\t\t</div>\n\t</div>\n\t</div>\n</div>\n\t</div>\n</div>\n\t\t\t<div class=\"fl-col fl-node-5ef0eebc27868 fl-col-small fl-col-small-full-width col-md-4 col-lg-2 margin--bottom-3 margin--bottom-lg-0\" data-node=\"5ef0eebc27868\">\n\t<div class=\"fl-col-content fl-node-content\">\n\t<div class=\"fl-module fl-module-photo fl-node-5ef0eebc2787b trusted-by-logo\" data-node=\"5ef0eebc2787b\">\n\t<div class=\"fl-module-content fl-node-content\">\n\t\t<div class=\"fl-photo fl-photo-align-center\" itemscope=\"\" itemtype=\"https://schema.org/ImageObject\">\n\t<div class=\"fl-photo-content fl-photo-img-png\">\n\t\t\t\t<a href=\"https://www.playper.com/\" target=\"_self\" itemprop=\"url\">\n\t\t\t\t<img class=\"fl-photo-img wp-image-4437 size-full\" src=\"https://acadium.com/wp-content/uploads/2020/05/playper.png\" alt=\"Playper\" itemprop=\"image\" height=\"193\" width=\"640\" title=\"playper\" srcset=\"https://acadium.com/wp-content/uploads/2020/05/playper.png 640w, https://acadium.com/wp-content/uploads/2020/05/playper-300x90.png 300w\" sizes=\"(max-width: 640px) 100vw, 640px\">\n\t\t\t\t</a>\n\t\t\t\t\t</div>\n\t</div>\n\t</div>\n</div>\n\t</div>\n</div>\n\t\t\t<div class=\"fl-col fl-node-5ef0eebc27876 fl-col-small fl-col-small-full-width col-md-4 col-lg-2 margin--bottom-3 margin--bottom-lg-0\" data-node=\"5ef0eebc27876\">\n\t<div class=\"fl-col-content fl-node-content\">\n\t<div class=\"fl-module fl-module-photo fl-node-5ef0eebc2787c trusted-by-logo\" data-node=\"5ef0eebc2787c\">\n\t<div class=\"fl-module-content fl-node-content\">\n\t\t<div class=\"fl-photo fl-photo-align-center\" itemscope=\"\" itemtype=\"https://schema.org/ImageObject\">\n\t<div class=\"fl-photo-content fl-photo-img-png\">\n\t\t\t\t<a href=\"https://www.bevivafoods.com/\" target=\"_self\" itemprop=\"url\">\n\t\t\t\t<img class=\"fl-photo-img wp-image-4438 size-full\" src=\"https://acadium.com/wp-content/uploads/2020/05/beviva.png\" alt=\"Beviva Foods\" itemprop=\"image\" height=\"193\" width=\"640\" title=\"beviva\" srcset=\"https://acadium.com/wp-content/uploads/2020/05/beviva.png 640w, https://acadium.com/wp-content/uploads/2020/05/beviva-300x90.png 300w\" sizes=\"(max-width: 640px) 100vw, 640px\">\n\t\t\t\t</a>\n\t\t\t\t\t</div>\n\t</div>\n\t</div>\n</div>\n\t</div>\n</div>\n\t\t\t<div class=\"fl-col fl-node-5ef0eebc27877 fl-col-small fl-col-small-full-width col-md-4 col-lg-2 margin--bottom-3 margin--bottom-lg-0\" data-node=\"5ef0eebc27877\">\n\t<div class=\"fl-col-content fl-node-content\">\n\t<div class=\"fl-module fl-module-photo fl-node-5ef0eebc2787d trusted-by-logo\" data-node=\"5ef0eebc2787d\">\n\t<div class=\"fl-module-content fl-node-content\">\n\t\t<div class=\"fl-photo fl-photo-align-center\" itemscope=\"\" itemtype=\"https://schema.org/ImageObject\">\n\t<div class=\"fl-photo-content fl-photo-img-png\">\n\t\t\t\t<a href=\"https://www.collectivelysocial.com/\" target=\"_self\" itemprop=\"url\">\n\t\t\t\t<img class=\"fl-photo-img wp-image-4452 size-full\" src=\"https://acadium.com/wp-content/uploads/2020/05/collectively-social-1.png\" alt=\"Collectively Social\" itemprop=\"image\" height=\"192\" width=\"640\" title=\"collectively-social\" srcset=\"https://acadium.com/wp-content/uploads/2020/05/collectively-social-1.png 640w, https://acadium.com/wp-content/uploads/2020/05/collectively-social-1-300x90.png 300w\" sizes=\"(max-width: 640px) 100vw, 640px\">\n\t\t\t\t</a>\n\t\t\t\t\t</div>\n\t</div>\n\t</div>\n</div>\n\t</div>\n</div>\n\t\t\t<div class=\"fl-col fl-node-5ef0eebc27878 fl-col-small fl-col-small-full-width col-md-4 col-lg-2\" data-node=\"5ef0eebc27878\">\n\t<div class=\"fl-col-content fl-node-content\">\n\t<div class=\"fl-module fl-module-photo fl-node-5ef0eebc2787e trusted-by-logo\" data-node=\"5ef0eebc2787e\">\n\t<div class=\"fl-module-content fl-node-content\">\n\t\t<div class=\"fl-photo fl-photo-align-center\" itemscope=\"\" itemtype=\"https://schema.org/ImageObject\">\n\t<div class=\"fl-photo-content fl-photo-img-png\">\n\t\t\t\t<a href=\"https://www.bounceapp.ca/\" target=\"_self\" itemprop=\"url\">\n\t\t\t\t<img class=\"fl-photo-img wp-image-4604 size-full\" src=\"https://acadium.com/wp-content/uploads/2020/06/bounce.png\" alt=\"bounce\" itemprop=\"image\" height=\"192\" width=\"640\" title=\"bounce\" srcset=\"https://acadium.com/wp-content/uploads/2020/06/bounce.png 640w, https://acadium.com/wp-content/uploads/2020/06/bounce-300x90.png 300w\" sizes=\"(max-width: 640px) 100vw, 640px\">\n\t\t\t\t</a>\n\t\t\t\t\t</div>\n\t</div>\n\t</div>\n</div>\n\t</div>\n</div>\n\t</div>\n\t\t</div>\n\t</div>\n</div>\n<section class=\"fl-row fl-row-full-width fl-row-bg-color fl-node-5ecbe8396e16f swipe-background swipe-background-left swipe-background-graphite\" data-node=\"5ecbe8396e16f\">\n\t<div class=\"fl-row-content-wrap\">\n\t\t\t\t\t\t<div class=\"fl-row-content fl-row-fixed-width fl-node-content\">\n\t\t\n<div class=\"fl-col-group fl-node-5ecbe8396e3fe fl-col-group-equal-height fl-col-group-align-center\" data-node=\"5ecbe8396e3fe\">\n\t\t\t<div class=\"fl-col fl-node-5ecbe8396e401 fl-col-small fl-col-small-full-width col-md-5\" data-node=\"5ecbe8396e401\">\n\t<div class=\"fl-col-content fl-node-content\">\n\t<div class=\"fl-module fl-module-heading fl-node-5ecbe8396e402 h2\" data-node=\"5ecbe8396e402\">\n\t<div class=\"fl-module-content fl-node-content\">\n\t\t<h2 class=\"fl-heading\">\n\t\t<span class=\"fl-heading-text\">Dedicated human support every step of the way</span>\n\t</h2>\n\t</div>\n</div>\n<div class=\"fl-module fl-module-rich-text fl-node-5ecbe8396e403\" data-node=\"5ecbe8396e403\">\n\t<div class=\"fl-module-content fl-node-content\">\n\t\t<div class=\"fl-rich-text\">\n\t<p class=\"p1\">When you start an apprenticeship on Acadium we connect you with your own, dedicated member of our team to help you get the most from your time together.</p>\n</div>\n\t</div>\n</div>\n\t</div>\n</div>\n\t\t\t<div class=\"fl-col fl-node-5ecbe8396e405 fl-col-small fl-col-small-full-width col-md-6 offset-md-1\" data-node=\"5ecbe8396e405\">\n\t<div class=\"fl-col-content fl-node-content\">\n\t<div class=\"fl-module fl-module-photo fl-node-5ecbe8396e406 fade-up fade-up--delayed\" data-node=\"5ecbe8396e406\">\n\t<div class=\"fl-module-content fl-node-content\">\n\t\t<div class=\"fl-photo fl-photo-align-center\" itemscope=\"\" itemtype=\"https://schema.org/ImageObject\">\n\t<div class=\"fl-photo-content fl-photo-img-jpg\">\n\t\t\t\t<img class=\"fl-photo-img wp-image-4461 size-full\" src=\"https://acadium.com/wp-content/uploads/2020/05/support-1.jpg\" alt=\"support\" itemprop=\"image\" height=\"1450\" width=\"1088\" title=\"support\" srcset=\"https://acadium.com/wp-content/uploads/2020/05/support-1.jpg 1088w, https://acadium.com/wp-content/uploads/2020/05/support-1-225x300.jpg 225w, https://acadium.com/wp-content/uploads/2020/05/support-1-768x1024.jpg 768w\" sizes=\"(max-width: 1088px) 100vw, 1088px\">\n\t\t\t\t\t</div>\n\t</div>\n\t</div>\n</div>\n\t</div>\n</div>\n\t</div>\n\t\t</div>\n\t</div>\n</section>\n<section class=\"fl-row fl-row-full-width fl-row-bg-none fl-node-5ec6731634759 layout--padding layout--padding-large sign-up\" data-node=\"5ec6731634759\">\n\t<div class=\"fl-row-content-wrap\">\n\t\t\t\t\t\t<div class=\"fl-row-content fl-row-fixed-width fl-node-content\">\n\t\t\n<div class=\"fl-col-group fl-node-5ec6731637b8d\" data-node=\"5ec6731637b8d\">\n\t\t\t<div class=\"fl-col fl-node-5ec6731637da7 col-md-10 offset-md-1 col-lg-8 offset-lg-2\" data-node=\"5ec6731637da7\">\n\t<div class=\"fl-col-content fl-node-content\">\n\t<div class=\"fl-module fl-module-heading fl-node-5ec6731b6ebe4 margin--bottom-1-to-2\" data-node=\"5ec6731b6ebe4\">\n\t<div class=\"fl-module-content fl-node-content\">\n\t\t<h2 class=\"fl-heading\">\n\t\t<span class=\"fl-heading-text\">Find out what an apprenticeship can do for you</span>\n\t</h2>\n\t</div>\n</div>\n<div class=\"fl-module fl-module-rich-text fl-node-5ec6734c4959a margin--bottom-3\" data-node=\"5ec6734c4959a\">\n\t<div class=\"fl-module-content fl-node-content\">\n\t\t<div class=\"fl-rich-text\">\n\t<p>Whether you’re looking to get experience or get an apprentice to assist on your next project, Acadium is here for you.</p>\n</div>\n\t</div>\n</div>\n<div class=\"fl-module fl-module-html fl-node-5ec84227d74fb\" data-node=\"5ec84227d74fb\">\n\t<div class=\"fl-module-content fl-node-content\">\n\t\t<div class=\"fl-html\">\n\t<div class=\"button-large center\">\n    <a class=\"fl-button margin--bottom-1 margin--bottom-md-0 margin--right-md-3\" href=\"https://app.acadium.com/signup/student\">Get a mentor</a><a class=\"fl-button\" href=\"https://app.acadium.com/signup/business\">Get an apprentice</a>\n</div>\n</div>\n\t</div>\n</div>\n\t</div>\n</div>\n\t</div>\n\t\t</div>\n\t</div>\n</section>\n</div>\t</div><!-- .fl-post-content -->\n\t\n</article>\n\n<!-- .fl-post -->\n\t\t</div>\n\t</div>\n</div>\n\n\n\t</div><!-- .fl-page-content -->\n\t<footer class=\"fl-builder-content fl-builder-content-461 fl-builder-global-templates-locked\" data-post-id=\"461\" itemscope=\"itemscope\" itemtype=\"http://schema.org/WPFooter\" data-type=\"footer\"><div class=\"fl-row fl-row-full-width fl-row-bg-color fl-node-5da0cea5ec3e0\" data-node=\"5da0cea5ec3e0\">\n\t<div class=\"fl-row-content-wrap\">\n\t\t\t\t\t\t<div class=\"fl-row-content fl-row-fixed-width fl-node-content\">\n\t\t\n<div class=\"fl-col-group fl-node-5da0e4c8a2c8c fl-col-group-custom-width\" data-node=\"5da0e4c8a2c8c\">\n\t\t\t<div class=\"fl-col fl-node-5da0e4c8a2d34 fl-col-small fl-col-small-full-width col-lg-4\" data-node=\"5da0e4c8a2d34\">\n\t<div class=\"fl-col-content fl-node-content\">\n\t<div class=\"fl-module fl-module-photo fl-node-5da0d8a63ee11\" data-node=\"5da0d8a63ee11\">\n\t<div class=\"fl-module-content fl-node-content\">\n\t\t<div class=\"fl-photo fl-photo-align-left\" itemscope=\"\" itemtype=\"https://schema.org/ImageObject\">\n\t<div class=\"fl-photo-content fl-photo-img-png\">\n\t\t\t\t<a href=\"/\" target=\"_self\" itemprop=\"url\">\n\t\t\t\t<img class=\"fl-photo-img wp-image-672 size-full\" src=\"https://acadium.com/wp-content/uploads/2019/10/acadium-icon.png\" alt=\"acadium-icon\" itemprop=\"image\" height=\"996\" width=\"1025\" title=\"acadium-icon\" srcset=\"https://acadium.com/wp-content/uploads/2019/10/acadium-icon.png 1025w, https://acadium.com/wp-content/uploads/2019/10/acadium-icon-300x292.png 300w, https://acadium.com/wp-content/uploads/2019/10/acadium-icon-768x746.png 768w, https://acadium.com/wp-content/uploads/2019/10/acadium-icon-1024x995.png 1024w\" sizes=\"(max-width: 1025px) 100vw, 1025px\">\n\t\t\t\t</a>\n\t\t\t\t\t</div>\n\t</div>\n\t</div>\n</div>\n<div class=\"fl-module fl-module-rich-text fl-node-5da0f95168557 letter-spacing-0 footer-mission-statement\" data-node=\"5da0f95168557\">\n\t<div class=\"fl-module-content fl-node-content\">\n\t\t<div class=\"fl-rich-text\">\n\t<p>Online apprenticeships available to anyone, anywhere.</p>\n</div>\n\t</div>\n</div>\n\t</div>\n</div>\n\t\t\t<div class=\"fl-col fl-node-5da0e4c8a2d3a fl-col-small fl-col-small-full-width col-md-4 col-lg-2 offset-lg-2\" data-node=\"5da0e4c8a2d3a\">\n\t<div class=\"fl-col-content fl-node-content\">\n\t<div class=\"fl-module fl-module-heading fl-node-5dc09cbbd83f3 footer-header\" data-node=\"5dc09cbbd83f3\">\n\t<div class=\"fl-module-content fl-node-content\">\n\t\t<h2 class=\"fl-heading\">\n\t\t<span class=\"fl-heading-text\">For Apprentices</span>\n\t</h2>\n\t</div>\n</div>\n<div class=\"fl-module fl-module-button fl-node-5da0eab17d750\" data-node=\"5da0eab17d750\">\n\t<div class=\"fl-module-content fl-node-content\">\n\t\t<div class=\"fl-button-wrap fl-button-width-auto fl-button-left\">\n\t\t\t<a href=\"/get-a-mentor\" target=\"_self\" class=\"fl-button\" role=\"button\">\n\t\t\t\t\t\t\t<span class=\"fl-button-text\">Get a Mentor</span>\n\t\t\t\t\t</a>\n</div>\n\t</div>\n</div>\n<div class=\"fl-module fl-module-button fl-node-5da0e1dd0c4fc\" data-node=\"5da0e1dd0c4fc\">\n\t<div class=\"fl-module-content fl-node-content\">\n\t\t<div class=\"fl-button-wrap fl-button-width-auto fl-button-left\">\n\t\t\t<a href=\"/courses\" target=\"_self\" class=\"fl-button\" role=\"button\">\n\t\t\t\t\t\t\t<span class=\"fl-button-text\">Courses</span>\n\t\t\t\t\t</a>\n</div>\n\t</div>\n</div>\n<div class=\"fl-module fl-module-button fl-node-5da0e20b0c27d\" data-node=\"5da0e20b0c27d\">\n\t<div class=\"fl-module-content fl-node-content\">\n\t\t<div class=\"fl-button-wrap fl-button-width-auto fl-button-left\">\n\t\t\t<a href=\"https://acadium.com/acadium-plus/\" target=\"_self\" class=\"fl-button\" role=\"button\">\n\t\t\t\t\t\t\t<span class=\"fl-button-text\">Acadium Plus</span>\n\t\t\t\t\t</a>\n</div>\n\t</div>\n</div>\n\t</div>\n</div>\n\t\t\t<div class=\"fl-col fl-node-5da0e5a8a0b19 fl-col-small fl-col-small-full-width col-md-4 col-md-3 col-lg-2\" data-node=\"5da0e5a8a0b19\">\n\t<div class=\"fl-col-content fl-node-content\">\n\t<div class=\"fl-module fl-module-heading fl-node-5dc09daf9cb8c footer-header\" data-node=\"5dc09daf9cb8c\">\n\t<div class=\"fl-module-content fl-node-content\">\n\t\t<h2 class=\"fl-heading\">\n\t\t<span class=\"fl-heading-text\">For Mentors</span>\n\t</h2>\n\t</div>\n</div>\n<div class=\"fl-module fl-module-button fl-node-5da0e9e6863c7\" data-node=\"5da0e9e6863c7\">\n\t<div class=\"fl-module-content fl-node-content\">\n\t\t<div class=\"fl-button-wrap fl-button-width-auto fl-button-left\">\n\t\t\t<a href=\"/get-an-apprentice\" target=\"_self\" class=\"fl-button\" role=\"button\">\n\t\t\t\t\t\t\t<span class=\"fl-button-text\">Get an Apprentice</span>\n\t\t\t\t\t</a>\n</div>\n\t</div>\n</div>\n<div class=\"fl-module fl-module-button fl-node-5da0e6b24b615\" data-node=\"5da0e6b24b615\">\n\t<div class=\"fl-module-content fl-node-content\">\n\t\t<div class=\"fl-button-wrap fl-button-width-auto fl-button-left\">\n\t\t\t<a href=\"/hire\" target=\"_self\" class=\"fl-button\" role=\"button\">\n\t\t\t\t\t\t\t<span class=\"fl-button-text\">Hire Full-Time</span>\n\t\t\t\t\t</a>\n</div>\n\t</div>\n</div>\n<div class=\"fl-module fl-module-button fl-node-5da0e6c87e3ba\" data-node=\"5da0e6c87e3ba\">\n\t<div class=\"fl-module-content fl-node-content\">\n\t\t<div class=\"fl-button-wrap fl-button-width-auto fl-button-left\">\n\t\t\t<a href=\"/pricing\" target=\"_self\" class=\"fl-button\" role=\"button\">\n\t\t\t\t\t\t\t<span class=\"fl-button-text\">Pricing</span>\n\t\t\t\t\t</a>\n</div>\n\t</div>\n</div>\n\t</div>\n</div>\n\t\t\t<div class=\"fl-col fl-node-5da0e5536e93a fl-col-small fl-col-small-full-width col-md-4 col-lg-2\" data-node=\"5da0e5536e93a\">\n\t<div class=\"fl-col-content fl-node-content\">\n\t<div class=\"fl-module fl-module-heading fl-node-5dc09dab10274 footer-header\" data-node=\"5dc09dab10274\">\n\t<div class=\"fl-module-content fl-node-content\">\n\t\t<h2 class=\"fl-heading\">\n\t\t<span class=\"fl-heading-text\">Company</span>\n\t</h2>\n\t</div>\n</div>\n<div class=\"fl-module fl-module-button fl-node-5da0e5536e9d6\" data-node=\"5da0e5536e9d6\">\n\t<div class=\"fl-module-content fl-node-content\">\n\t\t<div class=\"fl-button-wrap fl-button-width-auto fl-button-left\">\n\t\t\t<a href=\"/about\" target=\"_self\" class=\"fl-button\" role=\"button\">\n\t\t\t\t\t\t\t<span class=\"fl-button-text\">About Us</span>\n\t\t\t\t\t</a>\n</div>\n\t</div>\n</div>\n<div class=\"fl-module fl-module-button fl-node-5dbad3ef67bcf\" data-node=\"5dbad3ef67bcf\">\n\t<div class=\"fl-module-content fl-node-content\">\n\t\t<div class=\"fl-button-wrap fl-button-width-auto fl-button-left\">\n\t\t\t<a href=\"/blog\" target=\"_self\" class=\"fl-button\" role=\"button\">\n\t\t\t\t\t\t\t<span class=\"fl-button-text\">Blog</span>\n\t\t\t\t\t</a>\n</div>\n\t</div>\n</div>\n<div class=\"fl-module fl-module-button fl-node-5dbad3e42737b\" data-node=\"5dbad3e42737b\">\n\t<div class=\"fl-module-content fl-node-content\">\n\t\t<div class=\"fl-button-wrap fl-button-width-auto fl-button-left\">\n\t\t\t<a href=\"/careers\" target=\"_self\" class=\"fl-button\" role=\"button\">\n\t\t\t\t\t\t\t<span class=\"fl-button-text\">Careers</span>\n\t\t\t\t\t</a>\n</div>\n\t</div>\n</div>\n<div class=\"fl-module fl-module-button fl-node-5dbad4001bbe1\" data-node=\"5dbad4001bbe1\">\n\t<div class=\"fl-module-content fl-node-content\">\n\t\t<div class=\"fl-button-wrap fl-button-width-auto fl-button-left\">\n\t\t\t<a href=\"https://acadium.zendesk.com/\" target=\"_self\" class=\"fl-button\" role=\"button\">\n\t\t\t\t\t\t\t<span class=\"fl-button-text\">Help Centre</span>\n\t\t\t\t\t</a>\n</div>\n\t</div>\n</div>\n\t</div>\n</div>\n\t</div>\n\n<div class=\"fl-col-group fl-node-5da0e7b36e517\" data-node=\"5da0e7b36e517\">\n\t\t\t<div class=\"fl-col fl-node-5da0e7b36e595\" data-node=\"5da0e7b36e595\">\n\t<div class=\"fl-col-content fl-node-content\">\n\t<div class=\"fl-module fl-module-separator fl-node-5da0e7b36e4ca\" data-node=\"5da0e7b36e4ca\">\n\t<div class=\"fl-module-content fl-node-content\">\n\t\t<div class=\"fl-separator\"></div>\n\t</div>\n</div>\n\t</div>\n</div>\n\t</div>\n\n<div class=\"fl-col-group fl-node-5da0e7ad7319e fl-col-group-equal-height fl-col-group-align-center\" data-node=\"5da0e7ad7319e\">\n\t\t\t<div class=\"fl-col fl-node-5da0e7ad7323e fl-col-small fl-col-small-full-width col-md-6\" data-node=\"5da0e7ad7323e\">\n\t<div class=\"fl-col-content fl-node-content\">\n\t<div class=\"fl-module fl-module-rich-text fl-node-5dc0914de7351\" data-node=\"5dc0914de7351\">\n\t<div class=\"fl-module-content fl-node-content\">\n\t\t<div class=\"fl-rich-text\">\n\t<div><span class=\"footer-copyright\" style=\"margin-right: 24px;\">© Acadium, Inc.</span><a class=\"footer-link\" style=\"margin-right: 24px;\" href=\"/privacy\">Privacy</a><a class=\"footer-link\" style=\"margin-right: 24px;\" href=\"/terms\">Terms</a><a class=\"footer-link\" href=\"/use-policy\">Use Policy</a></div>\n</div>\n\t</div>\n</div>\n\t</div>\n</div>\n\t\t\t<div class=\"fl-col fl-node-5dc0914f8f30d fl-col-small fl-col-small-full-width\" data-node=\"5dc0914f8f30d\">\n\t<div class=\"fl-col-content fl-node-content\">\n\t<div class=\"fl-module fl-module-html fl-node-5dc0a28581cb4\" data-node=\"5dc0a28581cb4\">\n\t<div class=\"fl-module-content fl-node-content\">\n\t\t<div class=\"fl-html\">\n\t<ul class=\"social-media-links\">\n    <li>\n        <a href=\"https://www.facebook.com/AcadiumOfficial/\">\n            <title>Facebook</title>\n            <svg id=\"facebook\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\">\n                <path d=\"M16 8a8 8 0 1 0-9.2 7.9v-5.6H4.7V8h2.1V6.2a2.8 2.8 0 0 1 3-3.1l1.8.2v1.9h-1a1.3 1.3 0 0 0-1.4 1.3V8h2.3l-.4 2.3H9.2v5.6A8 8 0 0 0 16 8z\"></path>\n            </svg>\n        </a>\n    </li>\n    <li>\n        <a href=\"https://www.instagram.com/acadiumofficial/\">\n            <title>Instagram</title>\n            <svg id=\"instagram\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\">\n              <path d=\"M8 1.4h3.2a3.8 3.8 0 0 1 1.5.3 1.5 1.5 0 0 1 .9.6 1.5 1.5 0 0 1 .6.9 3.8 3.8 0 0 1 .3 1.5 22.1 22.1 0 0 1 .1 3.3 22.1 22.1 0 0 1-.1 3.2 3.8 3.8 0 0 1-.3 1.5 1.5 1.5 0 0 1-.6.9 1.5 1.5 0 0 1-.9.6 3.8 3.8 0 0 1-1.5.3H4.8a3.8 3.8 0 0 1-1.5-.3 1.5 1.5 0 0 1-.9-.6 1.5 1.5 0 0 1-.6-.9 3.8 3.8 0 0 1-.3-1.5A22.1 22.1 0 0 1 1.4 8a22.1 22.1 0 0 1 .1-3.2 3.8 3.8 0 0 1 .3-1.5 1.5 1.5 0 0 1 .6-.9 1.5 1.5 0 0 1 .9-.6 3.8 3.8 0 0 1 1.5-.3H8M8 0H4.7L2.8.4a4.6 4.6 0 0 0-1.5.9 4.6 4.6 0 0 0-.9 1.5A7.8 7.8 0 0 0 0 4.7v6.6a7.8 7.8 0 0 0 .4 1.9 4.6 4.6 0 0 0 .9 1.5 4.6 4.6 0 0 0 1.5.9l1.9.4h6.6l1.9-.4a4.6 4.6 0 0 0 1.5-.9 4.6 4.6 0 0 0 .9-1.5 7.8 7.8 0 0 0 .4-1.9V4.7a7.8 7.8 0 0 0-.4-1.9 4.6 4.6 0 0 0-.9-1.5 4.6 4.6 0 0 0-1.5-.9L11.3 0z\"></path>\n              <path d=\"M8 3.9A4.1 4.1 0 0 0 3.9 8 4.1 4.1 0 0 0 8 12.1 4.1 4.1 0 0 0 12.1 8 4.1 4.1 0 0 0 8 3.9zm0 6.8A2.7 2.7 0 1 1 10.7 8 2.7 2.7 0 0 1 8 10.7z\"></path>\n              <circle cx=\"12.3\" cy=\"3.7\" r=\"1\"></circle>\n            </svg>\n        </a>\n    </li>\n    <li>\n        <a href=\"https://twitter.com/AcadiumOfficial\">\n           <title>Twitter</title>\n           <svg id=\"twitter\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\">\n                <path d=\"M5 14.5a9.3 9.3 0 0 0 9.4-9.3v-.5A5.2 5.2 0 0 0 16 3a6 6 0 0 1-1.9.6 4 4 0 0 0 1.5-1.9 6 6 0 0 1-2.1.8 3.5 3.5 0 0 0-2.4-1 3.3 3.3 0 0 0-3.3 3.3 1.7 1.7 0 0 0 .1.7 9.2 9.2 0 0 1-6.8-3.4 2.9 2.9 0 0 0-.4 1.6 3.2 3.2 0 0 0 1.4 2.8 4.2 4.2 0 0 1-1.5-.4 3.3 3.3 0 0 0 2.7 3.2H1.8a3.4 3.4 0 0 0 3.1 2.3 7.5 7.5 0 0 1-4.1 1.5H0a8.9 8.9 0 0 0 5 1.5\"></path>\n            </svg>\n        </a>\n    </li>\n    <li>\n        <a href=\"https://www.pinterest.ca/acadiumofficial/\">\n           <title>Pinterest</title>\n           <svg id=\"pinterest\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\">\n               <path d=\"M.1 9.4l.3 1a3.6 3.6 0 0 0 .4.9c0 .1 0 .2.1.2a4.1 4.1 0 0 0 .5.9v.2l.6.6v.2l.8.7c0 .1.1.1.2.2l.7.4.2.2.9.4h.1a8.8 8.8 0 0 1 0-2.3c.2-.6.9-3.9.9-3.9a3.5 3.5 0 0 1 0-1.1c0-1.1.7-2 1.5-2a1.1 1.1 0 0 1 1 1.2 17.1 17.1 0 0 1-.7 2.6 1.2 1.2 0 0 0 1.2 1.5c1.4 0 2.5-1.5 2.5-3.7A3.1 3.1 0 0 0 8 4.4a3.5 3.5 0 0 0-3.7 3.4 3.6 3.6 0 0 0 .6 1.9c.1 0 .1.1.1.2a3.7 3.7 0 0 0-.2.9c-.1.1-.2.2-.3.1a3.6 3.6 0 0 1-1.6-3.1C2.9 5.3 4.7 3 8.2 3a4.7 4.7 0 0 1 4.9 4.6c0 2.8-1.7 5-4.2 5a2.2 2.2 0 0 1-1.8-1l-.5 2a7.5 7.5 0 0 1-1 2l.7.2H8a7.9 7.9 0 0 0 5.6-2.3A8 8 0 0 0 8.8 0H7.2A8.1 8.1 0 0 0 0 7.2V8a4.1 4.1 0 0 0 .1 1.1z\"></path>\n            </svg>\n        </a>\n    </li>\n</ul></div>\n\t</div>\n</div>\n\t</div>\n</div>\n\t</div>\n\t\t</div>\n\t</div>\n</div>\n</footer>\t</div><!-- .fl-page -->\n<div id=\"cookie-law-info-bar\"><span>We use cookies to provide you with a more personalized service. By using our site you agree to our <a href=\"https://acadium.com/privacy/\" id=\"CONSTANT_OPEN_URL\" target=\"_blank\" class=\"cli-plugin-main-link\" style=\"display:inline-block;\">cookie policy</a> <a role=\"button\" tabindex=\"0\" data-cli_action=\"accept\" id=\"cookie_action_close_header\" class=\"medium cli-plugin-button cli-plugin-main-button cookie_action_close_header cli_action_button\" style=\"display:inline-block;  margin:8px; \">Accept</a></span></div><div id=\"cookie-law-info-again\" style=\"display:none;\"><span id=\"cookie_hdr_showagain\">Privacy &amp; Cookies Policy</span></div><div class=\"cli-modal\" id=\"cliSettingsPopup\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"cliSettingsPopup\" aria-hidden=\"true\">\n  <div class=\"cli-modal-dialog\" role=\"document\">\n    <div class=\"cli-modal-content cli-bar-popup\">\n      <button type=\"button\" class=\"cli-modal-close\" id=\"cliModalClose\">\n        <svg class=\"\" viewBox=\"0 0 24 24\"><path d=\"M19 6.41l-1.41-1.41-5.59 5.59-5.59-5.59-1.41 1.41 5.59 5.59-5.59 5.59 1.41 1.41 5.59-5.59 5.59 5.59 1.41-1.41-5.59-5.59z\"></path><path d=\"M0 0h24v24h-24z\" fill=\"none\"></path></svg>\n        <span class=\"wt-cli-sr-only\">Close</span>\n      </button>\n      <div class=\"cli-modal-body\">\n        <div class=\"cli-container-fluid cli-tab-container\">\n    <div class=\"cli-row\">\n        <div class=\"cli-col-12 cli-align-items-stretch cli-px-0\">\n            <div class=\"cli-privacy-overview\">\n                <h4>Privacy Overview</h4>                                   \n                <div class=\"cli-privacy-content\">\n                    <div class=\"cli-privacy-content-text\">This website uses cookies to improve your experience while you navigate through the website. Out of these cookies, the cookies that are categorized as necessary are stored on your browser as they are essential for the working of basic functionalities of the website. We also use third-party cookies that help us analyze and understand how you use this website. These cookies will be stored in your browser only with your consent. You also have the option to opt-out of these cookies. But opting out of some of these cookies may have an effect on your browsing experience.</div>\n                </div>\n                <a class=\"cli-privacy-readmore\" data-readmore-text=\"Show more\" data-readless-text=\"Show less\"></a>            </div>\n        </div>  \n        <div class=\"cli-col-12 cli-align-items-stretch cli-px-0 cli-tab-section-container\">\n              \n                            <div class=\"cli-tab-section\">\n                    <div class=\"cli-tab-header\">\n                        <a role=\"button\" tabindex=\"0\" class=\"cli-nav-link cli-settings-mobile\" data-target=\"necessary\" data-toggle=\"cli-toggle-tab\">\n                            Necessary \n                        </a>\n                    \n                    <span class=\"cli-necessary-caption\">Always Enabled</span>                     </div>\n                    <div class=\"cli-tab-content\">\n                        <div class=\"cli-tab-pane cli-fade\" data-id=\"necessary\">\n                            <p>Necessary cookies are absolutely essential for the website to function properly. This category only includes cookies that ensures basic functionalities and security features of the website. These cookies do not store any personal information.</p>\n                        </div>\n                    </div>\n                </div>\n              \n                            <div class=\"cli-tab-section\">\n                    <div class=\"cli-tab-header\">\n                        <a role=\"button\" tabindex=\"0\" class=\"cli-nav-link cli-settings-mobile\" data-target=\"non-necessary\" data-toggle=\"cli-toggle-tab\">\n                            Non-necessary \n                        </a>\n                    <div class=\"cli-switch\">\n                        <input type=\"checkbox\" id=\"wt-cli-checkbox-non-necessary\" class=\"cli-user-preference-checkbox\" data-id=\"checkbox-non-necessary\" checked=\"\">\n                        <label for=\"wt-cli-checkbox-non-necessary\" class=\"cli-slider\" data-cli-enable=\"Enabled\" data-cli-disable=\"Disabled\"><span class=\"wt-cli-sr-only\">Non-necessary</span></label>\n                    </div>                    </div>\n                    <div class=\"cli-tab-content\">\n                        <div class=\"cli-tab-pane cli-fade\" data-id=\"non-necessary\">\n                            <p>Any cookies that may not be particularly necessary for the website to function and is used specifically to collect user personal data via analytics, ads, other embedded contents are termed as non-necessary cookies. It is mandatory to procure user consent prior to running these cookies on your website.</p>\n                        </div>\n                    </div>\n                </div>\n                       \n        </div>\n    </div> \n</div> \n      </div>\n    </div>\n  </div>\n</div>\n<div class=\"cli-modal-backdrop cli-fade cli-settings-overlay\"></div>\n<div class=\"cli-modal-backdrop cli-fade cli-popupbar-overlay\"></div>\n[JS_CODE_23][JS_CODE_24]\n[JS_CODE_25]\n[JS_CODE_26]\n[JS_CODE_27]\n[JS_CODE_28]\n[JS_CODE_29]\n[JS_CODE_30]\n[JS_CODE_31]\n[JS_CODE_32]\n[JS_CODE_33]\n[JS_CODE_34]\n[JS_CODE_35]\n[JS_CODE_36][JS_CODE_37][JS_CODE_38]\n\n[JS_CODE_39]\n\n\n",
+          "_customCSS": "/* Type valid AMP CSS here */\n\ndiv {\n  padding: 80px 0;\n  color: #777;\n  text-align: center;\n}\np {\n  font-size: 60px;\n  color: #777;\n}",
+          "alias": "code-editor",
+          "_tags": [
+            "Extension"
+          ],
+          "_name": "pro.custom-html",
+          "_anchor": "custom-html-2",
+          "_PHPplaceholders": [],
+          "_JSplaceholders": [
+            "<script data-cfasync=\"false\" data-pagespeed-no-defer type=\"text/javascript\">//<![CDATA[\nvar gtm4wp_datalayer_name=\"dataLayer\";var dataLayer=dataLayer||[];\n//]]></script>",
+            "<script type='application/ld+json' class='yoast-schema-graph yoast-schema-graph--main'>{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"Organization\",\"@id\":\"https://acadium.com/#organization\",\"name\":\"Acadium\",\"url\":\"https://acadium.com/\",\"sameAs\":[\"https://www.facebook.com/AcadiumOfficial/\",\"https://www.instagram.com/AcadiumOfficial/\",\"https://www.linkedin.com/company/acadiumofficial/\",\"https://www.pinterest.ca/acadiumofficial/\",\"https://twitter.com/AcadiumOfficial\"],\"logo\":{\"@type\":\"ImageObject\",\"@id\":\"https://acadium.com/#logo\",\"url\":\"https://acadium.com/wp-content/uploads/2019/12/Acadium_PrimaryLogo_Red.png\",\"width\":1024,\"height\":217,\"caption\":\"Acadium\"},\"image\":{\"@id\":\"https://acadium.com/#logo\"}},{\"@type\":\"WebSite\",\"@id\":\"https://acadium.com/#website\",\"url\":\"https://acadium.com/\",\"name\":\"Acadium\",\"description\":\"Digital Apprenticeships\",\"publisher\":{\"@id\":\"https://acadium.com/#organization\"},\"potentialAction\":{\"@type\":\"SearchAction\",\"target\":\"https://acadium.com/?s={search_term_string}\",\"query-input\":\"required name=search_term_string\"}},{\"@type\":\"ImageObject\",\"@id\":\"https://acadium.com/#primaryimage\",\"url\":\"https://acadium.com/wp-content/uploads/2020/05/acadium-open-graph-image.jpg\",\"width\":1200,\"height\":630},{\"@type\":\"WebPage\",\"@id\":\"https://acadium.com/#webpage\",\"url\":\"https://acadium.com/\",\"inLanguage\":\"en-US\",\"name\":\"Acadium - Digital Apprenticeships to Grow Your Skills or Business\",\"isPartOf\":{\"@id\":\"https://acadium.com/#website\"},\"about\":{\"@id\":\"https://acadium.com/#organization\"},\"primaryImageOfPage\":{\"@id\":\"https://acadium.com/#primaryimage\"},\"datePublished\":\"2020-05-15T18:19:22+00:00\",\"dateModified\":\"2020-08-03T18:00:13+00:00\",\"description\":\"Get the support you need to achieve your professional goals with an Acadium apprenticeship.\"}]}</script>",
+            "<script type=\"text/javascript\">window._wpemojiSettings={\"baseUrl\":\"https:\\/\\/s.w.org\\/images\\/core\\/emoji\\/12.0.0-1\\/72x72\\/\",\"ext\":\".png\",\"svgUrl\":\"https:\\/\\/s.w.org\\/images\\/core\\/emoji\\/12.0.0-1\\/svg\\/\",\"svgExt\":\".svg\",\"source\":{\"concatemoji\":\"https:\\/\\/acadium.com\\/wp-includes\\/js\\/wp-emoji-release.min.js?ver=5.3.2\"}};!function(e,a,t){var r,n,o,i,p=a.createElement(\"canvas\"),s=p.getContext&&p.getContext(\"2d\");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline=\"top\",s.font=\"600 32px Arial\",e){case\"flag\":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case\"emoji\":return!c([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340])}return!1}function d(e){var t=a.createElement(\"script\");t.src=e,t.defer=t.type=\"text/javascript\",a.getElementsByTagName(\"head\")[0].appendChild(t)}for(i=Array(\"flag\",\"emoji\"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],\"flag\"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener(\"DOMContentLoaded\",n,!1),e.addEventListener(\"load\",n,!1)):(e.attachEvent(\"onload\",n),a.attachEvent(\"onreadystatechange\",function(){\"complete\"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);</script>",
+            "<script type='text/javascript' src='https://acadium.com/wp-content/plugins/jquery-updater/js/jquery-3.5.1.min.js?ver=3.5.1'></script>",
+            "<script type='text/javascript' src='https://acadium.com/wp-content/plugins/jquery-updater/js/jquery-migrate-3.3.0.min.js?ver=3.3.0'></script>",
+            "<script type='text/javascript'>//<![CDATA[\nvar Cli_Data={\"nn_cookie_ids\":[],\"cookielist\":[]};var log_object={\"ajax_url\":\"https:\\/\\/acadium.com\\/wp-admin\\/admin-ajax.php\"};\n//]]></script>",
+            "<script type='text/javascript' src='https://acadium.com/wp-content/plugins/cookie-law-info/public/js/cookie-law-info-public.js?ver=1.8.7'></script>",
+            "<script type='text/javascript'>//<![CDATA[\nvar cssTarget={\"Bodhi\":\"img.style-svg\",\"ForceInlineSVG\":\"style-svg\"};var ForceInlineSVGActive=\"true\";\n//]]></script>",
+            "<script type='text/javascript' src='https://acadium.com/wp-content/plugins/svg-support/js/min/svgs-inline-min.js?ver=1.0.0'></script>",
+            "<script type='text/javascript' src='https://acadium.com/wp-includes/js/imagesloaded.min.js?ver=5.3.2'></script>",
+            "<script type='text/javascript' src='https://acadium.com/wp-content/plugins/duracelltomi-google-tag-manager/js/gtm4wp-form-move-tracker.js?ver=1.11.2'></script>",
+            "<script type='text/javascript' src='https://acadium.com/wp-content/plugins/testimonial-rotator/js/jquery.cycletwo.js?ver=5.3.2'></script>",
+            "<script type='text/javascript' src='https://acadium.com/wp-content/plugins/testimonial-rotator/js/jquery.cycletwo.addons.js?ver=5.3.2'></script>",
+            "<script data-cfasync=\"false\" data-pagespeed-no-defer type=\"text/javascript\">//<![CDATA[\nvar dataLayer_content={\"pagePostType\":\"frontpage\",\"pagePostType2\":\"single-page\",\"pagePostAuthor\":\"Matthew Peixoto\"};dataLayer.push(dataLayer_content);\n//]]></script>",
+            "<script data-cfasync=\"false\">//<![CDATA[\n(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.'+'js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-NBJPPNQ');\n//]]></script>",
+            "<script>(function(h,o,t,j,a,r){h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};h._hjSettings={hjid:1599505,hjsv:5};a=o.getElementsByTagName('head')[0];r=o.createElement('script');r.async=1;r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;a.appendChild(r);})(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');</script>",
+            "<script async src=\"https://www.googletagmanager.com/gtag/js?id=UA-82056621-5\"></script>",
+            "<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','UA-82056621-5');</script>",
+            "<script src=\"https://calendly.com/assets/external/widget.js\" type=\"text/javascript\"></script>",
+            "<script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','1834759553461813');fbq('track','PageView');</script>",
+            "<script type='text/javascript'>(function(e,t,n){if(e.snaptr)return;var a=e.snaptr=function(){a.handleRequest?a.handleRequest.apply(a,arguments):a.queue.push(arguments)};a.queue=[];var s='script';r=t.createElement(s);r.async=!0;r.src=n;var u=t.getElementsByTagName(s)[0];u.parentNode.insertBefore(r,u);})(window,document,'https://sc-static.net/scevent.min.js');snaptr('init','fc79a12e-ee86-4300-8ea0-a901a960ef8a');snaptr('track','PAGE_VIEW');</script>",
+            "<script>(function(){window.ldfdr=window.ldfdr||{};(function(d,s,ss,fs){fs=d.getElementsByTagName(s)[0];function ce(src){var cs=d.createElement(s);cs.src=src;setTimeout(function(){fs.parentNode.insertBefore(cs,fs)},1);}ce(ss);})(document,'script','https://sc.lfeeder.com/lftracker_v1_ywVkO4XRrbx8Z6Bj.js');})();</script>",
+            "<script type=\"text/javascript\">jQuery(document).ready(function(){var utmValue='';if(utmValue!=''){var x=document.getElementsByTagName(\"A\");var i;for(i=0;i<x.length;i++){var n=x[i].href.indexOf(\"?\");if(x[i].href!='#'&&utmValue!=''){if(n>1){x[i].href=x[i].href+'&'+utmValue;}else{x[i].href=x[i].href+'?'+utmValue;}}}}var cleanSearch=window.location.search.replace(/[a-zA-Z0-9_?=^&]+&?/g,'').replace(/&$/,'').replace(/^\\?$/,'').replace(/^\\-$/,'').replace(/^\\--$/,'');var cleanHash=window.location.hash.replace(/utm_[^&]+&?/g,'').replace(/&$/,'').replace(/^\\#$/,'').replace(/^\\-$/,'').replace(/^\\--$/,'');window.history.replaceState({},'',window.location.pathname+cleanSearch+cleanHash);});</script>",
+            "<script type=\"text/javascript\">//<![CDATA[\ncli_cookiebar_settings='{\"animate_speed_hide\":\"500\",\"animate_speed_show\":\"500\",\"background\":\"#2e164b\",\"border\":\"#b1a6a6c2\",\"border_on\":false,\"button_1_button_colour\":\"#fd355a\",\"button_1_button_hover\":\"#ca2a48\",\"button_1_link_colour\":\"#fff\",\"button_1_as_button\":true,\"button_1_new_win\":false,\"button_2_button_colour\":\"#333\",\"button_2_button_hover\":\"#292929\",\"button_2_link_colour\":\"#ffffff\",\"button_2_as_button\":false,\"button_2_hidebar\":false,\"button_3_button_colour\":\"#000\",\"button_3_button_hover\":\"#000000\",\"button_3_link_colour\":\"#fff\",\"button_3_as_button\":true,\"button_3_new_win\":false,\"button_4_button_colour\":\"#000\",\"button_4_button_hover\":\"#000000\",\"button_4_link_colour\":\"#62a329\",\"button_4_as_button\":false,\"font_family\":\"inherit\",\"header_fix\":false,\"notify_animate_hide\":false,\"notify_animate_show\":false,\"notify_div_id\":\"#cookie-law-info-bar\",\"notify_position_horizontal\":\"right\",\"notify_position_vertical\":\"bottom\",\"scroll_close\":false,\"scroll_close_reload\":false,\"accept_close_reload\":false,\"reject_close_reload\":false,\"showagain_tab\":false,\"showagain_background\":\"#fff\",\"showagain_border\":\"#000\",\"showagain_div_id\":\"#cookie-law-info-again\",\"showagain_x_position\":\"100px\",\"text\":\"#ffffff\",\"show_once_yn\":false,\"show_once\":\"10000\",\"logging_on\":false,\"as_popup\":false,\"popup_overlay\":true,\"bar_heading_text\":\"\",\"cookie_bar_as\":\"banner\",\"popup_showagain_position\":\"bottom-right\",\"widget_position\":\"left\"}';\n//]]></script>",
+            "<script type='text/javascript' src='https://acadium.com/wp-content/uploads/bb-plugin/cache/4236-layout.js?ver=43f909c525220e8ef1ddffb5289e682e'></script>",
+            "<script type='text/javascript' src='https://acadium.com/wp-content/plugins/wp-team-pro/public/js/preloader.min.js?ver=2.0.4'></script>",
+            "<script type='text/javascript' src='https://acadium.com/wp-content/plugins/bb-plugin/js/jquery.ba-throttle-debounce.min.js?ver=2.3.1.1'></script>",
+            "<script type='text/javascript' src='https://acadium.com/wp-content/plugins/bb-plugin/js/jquery.fitvids.min.js?ver=1.2'></script>",
+            "<script type='text/javascript' src='https://acadium.com/wp-content/uploads/bb-plugin/cache/c4cb6a3ba66bf58b7a1da8a6175434ff-layout-bundle.js?ver=2.3.1.1-1.2.5'></script>",
+            "<script type='text/javascript'>//<![CDATA[\nvar tve_dash_front={\"ajaxurl\":\"https:\\/\\/acadium.com\\/wp-admin\\/admin-ajax.php\",\"force_ajax_send\":\"1\",\"is_crawler\":\"\"};\n//]]></script>",
+            "<script type='text/javascript' src='https://acadium.com/wp-content/plugins/thrive-leads/thrive-dashboard/js/dist/frontend.min.js?ver=2.2.8'></script>",
+            "<script type='text/javascript' src='https://acadium.com/wp-content/plugins/bb-plugin/js/jquery.magnificpopup.min.js?ver=2.3.1.1'></script>",
+            "<script type='text/javascript' src='https://acadium.com/wp-content/themes/bb-theme/js/bootstrap-4.min.js?ver=1.7.4.1'></script>",
+            "<script type='text/javascript'>//<![CDATA[\nvar themeopts={\"medium_breakpoint\":\"992\",\"mobile_breakpoint\":\"768\"};\n//]]></script>",
+            "<script type='text/javascript' src='https://acadium.com/wp-content/themes/bb-theme/js/theme.min.js?ver=1.7.4.1'></script>",
+            "<script type='text/javascript' src='https://acadium.com/wp-includes/js/wp-embed.min.js?ver=5.3.2'></script>",
+            "<script type=\"text/javascript\">var tcb_post_lists=JSON.parse('[]');</script>",
+            "<script type=\"text/javascript\">//<![CDATA[\nif(!window.TL_Const){var TL_Const={\"security\":\"8e342d9354\",\"ajax_url\":\"https:\\/\\/acadium.com\\/wp-admin\\/admin-ajax.php\",\"forms\":[],\"action_conversion\":\"tve_leads_ajax_conversion\",\"action_impression\":\"tve_leads_ajax_impression\",\"ajax_load\":0,\"custom_post_data\":{\"http_referrer\":\"https:\\/\\/acadium.com\\/blog\\/\"},\"current_screen\":{\"screen_type\":1,\"screen_id\":0},\"ignored_fields\":[\"email\",\"_captcha_size\",\"_captcha_theme\",\"_captcha_type\",\"_submit_option\",\"_use_captcha\",\"g-recaptcha-response\",\"__tcb_lg_fc\",\"__tcb_lg_msg\",\"_state\",\"_form_type\",\"_error_message_option\",\"_back_url\",\"_submit_option\",\"url\",\"_asset_group\",\"_asset_option\",\"mailchimp_optin\"]};}else{ThriveGlobal.$j.extend(true,TL_Const,{\"security\":\"8e342d9354\",\"ajax_url\":\"https:\\/\\/acadium.com\\/wp-admin\\/admin-ajax.php\",\"forms\":[],\"action_conversion\":\"tve_leads_ajax_conversion\",\"action_impression\":\"tve_leads_ajax_impression\",\"ajax_load\":0,\"custom_post_data\":{\"http_referrer\":\"https:\\/\\/acadium.com\\/blog\\/\"},\"current_screen\":{\"screen_type\":1,\"screen_id\":0},\"ignored_fields\":[\"email\",\"_captcha_size\",\"_captcha_theme\",\"_captcha_type\",\"_submit_option\",\"_use_captcha\",\"g-recaptcha-response\",\"__tcb_lg_fc\",\"__tcb_lg_msg\",\"_state\",\"_form_type\",\"_error_message_option\",\"_back_url\",\"_submit_option\",\"url\",\"_asset_group\",\"_asset_option\",\"mailchimp_optin\"]})}\n//]]></script>",
+            "<script>let quarterlyBtn=document.getElementById(\"quarterly-btn\");let annuallyBtn=document.getElementById(\"annually-btn\");let monthlyPrice=document.getElementById(\"monthly-price\");let totalPrice=document.getElementById(\"total-price\");if(annuallyBtn){annuallyBtn.addEventListener(\"click\",function(){monthlyPrice.innerHTML=\"$74\";totalPrice.innerHTML=\"Billed $890 annually\";quarterlyBtn.classList.remove('active');annuallyBtn.classList.add('active');});}if(quarterlyBtn){quarterlyBtn.addEventListener(\"click\",function(){monthlyPrice.innerHTML=\"$89\";totalPrice.innerHTML=\"Billed $267 quarterly\";quarterlyBtn.classList.add('active');annuallyBtn.classList.remove('active');});}</script>",
+            "<script>\n\n    // Script for making Accerlator subnav sticky\n    const bodies = document.getElementsByTagName('body');\n    const body = bodies[0];\n    if (location.pathname.includes('accelerator')) {\n        body.classList.add('no-padding-accelerator');\n    } else {\n        body.classList.remove('no-padding-accelerator');\n    }\n           \n    // Script for making Accerlator subnav sticky\n    window.addEventListener('scroll', (e) => {\n      const navs = document.getElementsByClassName('accelerator-local-nav-wrapper');\n      const scrollHeight = document.documentElement.scrollTop;\n\n      if (!navs || navs.length === 0) return;\n\n      const headers = document.getElementsByTagName('header');\n      const header = headers[0];\n      header.setAttribute('style', 'position: relative !important');\n      \n      let triggerHeight = header.clientHeight;\n      \n      const announcementBanners = document.getElementsByClassName('announcment-banner-row');\n      let announcement;\n      \n      if (announcementBanners && announcementBanners.length !== 0) {\n          announcement = announcementBanners[0];\n          triggerHeight += announcement.clientHeight;\n      }\n\n      const bodies = document.getElementsByTagName('body');\n      const body = bodies[0];\n\n      const subnav = navs[0];\n      const bounding = subnav.getBoundingClientRect();\n      \n      if (bounding.top <= 0) {\n        // Subnav is not in view\n        subnav.setAttribute('style', 'position: fixed !important; top: 0; left: 0; z-index: 1000000');\n        body.setAttribute('style', `padding-top: ${subnav.clientHeight}px !important`);\n      } else {\n          body.setAttribute('style', 'padding: 0 !important');\n      }\n\n      if (scrollHeight < triggerHeight) {\n        subnav.setAttribute('style', 'position: relative');\n        body.setAttribute('style', 'padding: 0 !important');\n      }\n    });\n</script>"
+          ]
+        }
+      ]
+    },
+    "home.html": {
+      "settings": {
+        "main": true,
+        "title": "Home",
+        "meta_descr": "Gain new experiences, make new connections",
+        "header_custom": "",
+        "footer_custom": "",
+        "html_before": ""
+      },
+      "components": [
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 1rem)",
+            "padding-bottom": "(@paddingBottom * 1rem)",
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)",
+              "& when (@overlay)": {
+                ".mbr-overlay": {
+                  "background": "@overlayColor",
+                  "opacity": "@overlayOpacity"
+                }
+              }
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            ".end": {
+              "display": "flex",
+              "align-items": "flex-end"
+            },
+            "p, h1": {
+              "z-index": "3",
+              "position": "relative"
+            },
+            ".row-2": {
+              "margin-top": "2rem"
+            },
+            "@media (min-width: 992px)": {
+              ".row-2": {
+                "margin-top": "-3.5rem"
+              }
+            },
+            "@media (max-width: 767px)": {
+              ".end": {
+                "justify-content": "center"
+              }
+            },
+            ".mbr-section-title": {
+              "color": "#ff5500"
+            },
+            ".image-block": {
+              "position": "relative",
+              "a": {
+                "border-bottom": "0px",
+                "&:before": {
+                  "content": "none"
+                }
+              },
+              "&:after": {
+                "content": "''",
+                "position": "absolute",
+                "left": "0",
+                "top": "0",
+                "width": "0%",
+                "background": "@primaryColor",
+                "height": "100%",
+                "z-index": "1",
+                "transition": "all 0.3s",
+                "pointer-events": "none",
+                "opacity": "0.8"
+              },
+              "&:hover": {
+                "&:after": {
+                  "width": "100%"
+                }
+              }
+            }
+          },
+          "_name": "header1",
+          "_customHTML": "<section class=\"header1\" group=\"Headers\" plugins=\"amp-main\">\n    <mbr-parameters>\n        <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <header>Size</header>\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"15\" step=\"1\" value=\"5\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"15\" step=\"1\" value=\"5\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Text\" name=\"showText\" checked>\n        <input type=\"checkbox\" title=\"Subtitle\" name=\"showSubTitle\" checked>\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\" required>\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/background1.jpg\">\n            <input type=\"color\" title=\"Background Color\" value=\"#ffffff\" selected>\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.3\" condition=\"overlay && bg.type !== 'color'\">\n        <!-- End block parameters -->\n    </mbr-parameters>\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\"></div>\n    <div mbr-class=\"{'container':!fullWidth,\n                     'container-fluid': fullWidth}\">\n        <div class=\"mbr-row\">\n            <div class=\"mbr-col-sm-12 mbr-col-md-12 mbr-col-lg-8\" mbr-if=\"showTitle\">\n                <h1 class=\"mbr-section-title align-left mbr-fonts-style mbr-semibold mbr-pb-4\" mbr-theme-style=\"display-1\" data-app-selector=\".mbr-section-title\">Get professional experience in the real world\n</h1>\n            </div>\n        </div>\n\n        <div class=\"mbr-row mbr-jc-e\">\n            <div class=\"mbr-col-sm-12 mbr-col-md-12 mbr-col-lg-10\" mbr-if=\"showText\">\n                <p class=\"mbr-text align-left mbr-semibold mbr-fonts-style\" mbr-class=\"{'mbr-pt-2': showTitle || showSubtitle}\" mbr-theme-style=\"display-2\" mbr-if=\"showText\" data-app-selector=\".mbr-section-btn, .mbr-text\">Apprentice under a mentor and gain new skills, work experience, and industry relationships. Entirely remote. Always free.\n<br>\n<br></p>\n            </div>\n        </div>\n\n        <div class=\"mbr-row row-2\">\n\n            <div class=\"mbr-col-sm-12 end mbr-col-md-12 mbr-col-lg-5\">\n                <h2 class=\"align-left mbr-fonts-style mbr-bold md-pb\" mbr-theme-style=\"display-1\" mbr-if=\"showSubTitle\">\n                    Insight</h2>\n            </div>\n\n            <div class=\"mbr-col-sm-12 mbr-col-md-12 mbr-col-lg-7\">\n                <div class=\"image-block\">\n                    <amp-img src=\"@PROJECT_PATH@/assets/images/hero-photo-mentor-1088x1450.jpg\" layout=\"responsive\" width=\"754.096551724138\" height=\"1005\" alt=\"image\" class=\"placeholder-loader\">\n                        <div placeholder class=\"placeholder\"></div>\n                        <a href=\"#\"><img class=\"mbr-temp\" src=\"@PROJECT_PATH@/assets/images/hero-photo-mentor-1088x1450.jpg\" alt title></a>\n                    </amp-img>\n                </div>\n            </div>\n\n\n        </div>\n    </div>\n</section>",
+          "_anchor": "header1-0",
+          "_isUserblock": true,
+          "_sourceTheme": "insightamp",
+          "_cid": "rBL93XYICr",
+          "_PHPplaceholders": [],
+          "_JSplaceholders": [],
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 1rem)",
+            "padding-bottom": "(@paddingBottom * 1rem)",
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)",
+              ".mbr-overlay": {
+                "background-color": "@overlayColor",
+                "opacity": "@overlayOpacity"
+              }
+            },
+            ".footer": {
+              "border-top": "8px solid black",
+              "padding-top": "1rem",
+              "transition": "all 0.3s",
+              "&:hover": {
+                "border-color": "@primaryColor",
+                "a": {
+                  "color": "@primaryColor"
+                }
+              },
+              "a": {
+                "&:before": {
+                  "content": "none"
+                }
+              }
+            }
+          },
+          "_name": "footer1",
+          "_customHTML": "<section class=\"footer1\" group=\"Footers\" plugins=\"amp-main\">\n    <mbr-parameters>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"5\" step=\"1\" value=\"4\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"5\" step=\"1\" value=\"4\">\n\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\">\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/background1.jpg\">\n            <input type=\"color\" title=\"Background Color\" value=\"#ffffff\" selected>\n        </fieldset>\n        <!--  -->\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" checked condition=\"bg.type!='color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"bg.type!='color' && overlay\">\n        <input type=\"range\" inline title=\"Overlay Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.4\" condition=\"bg.type!='color' && overlay\">\n        <!-- End block parameters -->\n    </mbr-parameters>\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\"></div>\n\n    <div class=\"container\">\n        <div class=\"mbr-row\">\n            <div class=\"mbr-col-sm-12 mbr-col-md-12 mbr-col-lg-12\">\n                <div class=\"footer\">\n                    <h3 class=\"align-right mbr-fonts-style mbr-bold\" mbr-theme-style=\"display-1\"><div></div></h3>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_anchor": "footer1-1",
+          "_isUserblock": true,
+          "_sourceTheme": "insightamp",
+          "_cid": "rBL9469T6R",
+          "_PHPplaceholders": [],
+          "_JSplaceholders": [],
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 1rem)",
+            "padding-bottom": "(@paddingBottom * 1rem)",
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)",
+              "& when (@overlay)": {
+                ".mbr-overlay": {
+                  "background": "@overlayColor",
+                  "opacity": "@overlayOpacity"
+                }
+              }
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "rect, polygon, circle": {
+              "fill": "@primaryColor !important"
+            },
+            "g": {
+              "stroke": "@primaryColor !important"
+            },
+            ".mbr-section-title": {
+              "color": "#ff5500"
+            },
+            ".mbr-col-lg-3": {
+              "position": "relative",
+              "margin": "auto 0"
+            },
+            ".arrows": {
+              "position": "absolute",
+              "top": "50%",
+              "transform": "translateY(-50%)",
+              "right": "-2rem"
+            },
+            "h2": {
+              "position": "absolute",
+              "top": "50%",
+              "left": "50%",
+              "transform": "translate(-50%, -50%)"
+            },
+            "@media (max-width: 992px)": {
+              ".mbr-col-lg-3": {
+                "margin-bottom": "1rem"
+              },
+              ".ar2": {
+                "right": "20rem",
+                "top": "16rem",
+                "transform": "rotate(150deg)"
+              }
+            },
+            "@media (max-width: 767px)": {
+              ".arrows": {
+                "display": "none"
+              }
+            },
+            "H2": {
+              "color": "#ffffff"
+            }
+          },
+          "_name": "features1",
+          "_customHTML": "<section class=\"features1\" group=\"Features\" plugins=\"amp-main\">\n    <mbr-parameters>\n        <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <header>Size</header>\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"15\" step=\"1\" value=\"5\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"15\" step=\"1\" value=\"5\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Text\" name=\"showText\" checked>\n        <input type=\"range\" inline title=\"Items\" name=\"cards\" min=\"1\" max=\"4\" step=\"1\" value=\"4\">\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\" required>\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/background1.jpg\">\n            <input type=\"color\" title=\"Background Color\" value=\"#ffffff\" selected>\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.7\" condition=\"overlay && bg.type !== 'color'\">\n        <!-- End block parameters -->\n    </mbr-parameters>\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\"></div>\n    <div mbr-class=\"{'container':!fullWidth,\n                     'container-fluid': fullWidth}\">\n        <div class=\"mbr-row\">\n            <div class=\"mbr-col-sm-12 mbr-col-md-12 mbr-col-lg-12\" mbr-if=\"showTitle\">\n                <h1 class=\"mbr-section-title align-left mbr-fonts-style mbr-semibold mbr-pb-4\" mbr-theme-style=\"display-1\" data-app-selector=\".mbr-section-title\">How Acadium apprenticeships work:\n<div><br></div></h1>\n            </div>\n        </div>\n\n        <div class=\"mbr-row mbr-pb-5 mbr-jc-e\">\n            <div class=\"mbr-col-sm-12 mbr-col-md-12 mbr-col-lg-10\" mbr-if=\"showText\">\n                <p class=\"mbr-text align-left mbr-semibold mbr-fonts-style\" mbr-class=\"{'mbr-pt-2': showTitle}\" mbr-theme-style=\"display-2\" mbr-if=\"showText\" data-app-selector=\".mbr-section-btn, .mbr-text\">For three months, apprentices help tackle their mentor’s business projects unpaid as part of their training. In exchange, the mentor provides feedback and guidance to help them improve.\n<br>\n<br></p>\n            </div>\n        </div>\n\n        <div class=\"mbr-row mbr-jc-c\">\n\n\n\n\n            <div class=\"mbr-col-sm-12 mbr-col-md-6 mbr-col-lg-3\" mbr-if=\"cards > 0\">\n                <svg width=\"100%\" height=\"260px\" viewBox=\"0 0 232 269\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">\n                    <g id=\"dizajn\" stroke=\"none\" stroke-width=\"1\" fill=\"none\" fill-rule=\"evenodd\">\n                        <g id=\"usluge\" transform=\"translate(-454.000000, -556.000000)\">\n                            <g id=\"Group-6\" transform=\"translate(437.000000, 556.500000)\">\n                                <polygon id=\"Polygon\" fill=\"#FF5500\" points=\"134 0 250.047404 67 250.047404 201 134 268 17.9525959 201 17.9525959 67\">\n                                </polygon>\n\n                            </g>\n                        </g>\n                    </g>\n                </svg>\n                <h2 class=\"align-center mbr-fonts-style mbr-semibold\" mbr-theme-style=\"display-5\">Discovery</h2>\n\n\n                <svg mbr-if=\"cards > 1\" class=\"arrows\" width=\"63px\" height=\"29px\" viewBox=\"2 0 61 29\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">\n                    <g id=\"dizajn\" stroke=\"none\" stroke-width=\"1\" fill=\"none\" fill-rule=\"evenodd\">\n                        <g id=\"usluge\" transform=\"translate(-392.000000, -676.000000)\" stroke=\"#FF5500\" stroke-width=\"5\">\n                            <g id=\"Group-5\" transform=\"translate(393.000000, 678.000000)\">\n                                <path d=\"M0,12 L56,11.5\" id=\"Line-2-Copy-7\"></path>\n                                <polyline id=\"Path-2-Copy-7\" transform=\"translate(51.500000, 12.500000) rotate(90.000000) translate(-51.500000, -12.500000) \" points=\"39 19 51.5 6 64 19\"></polyline>\n                            </g>\n                        </g>\n                    </g>\n                </svg>\n\n\n            </div>\n\n\n            <div class=\"mbr-col-sm-12 end mbr-col-md-6 mbr-col-lg-3\" mbr-if=\"cards > 1\">\n                <svg width=\"100%\" height=\"260px\" viewBox=\"0 0 232 269\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">\n                    <g id=\"dizajn\" stroke=\"none\" stroke-width=\"1\" fill=\"none\" fill-rule=\"evenodd\">\n                        <g id=\"usluge\" transform=\"translate(-454.000000, -556.000000)\">\n                            <g id=\"Group-6\" transform=\"translate(437.000000, 556.500000)\">\n                                <polygon id=\"Polygon\" fill=\"#FF5500\" points=\"134 0 250.047404 67 250.047404 201 134 268 17.9525959 201 17.9525959 67\">\n                                </polygon>\n\n                            </g>\n                        </g>\n                    </g>\n                </svg>\n                <h2 class=\"align-center mbr-fonts-style mbr-semibold\" mbr-theme-style=\"display-5\">Strategy</h2>\n                <svg mbr-if=\"cards > 2\" class=\"arrows ar2\" width=\"63px\" height=\"29px\" viewBox=\"2 0 61 29\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">\n                    <g id=\"dizajn\" stroke=\"none\" stroke-width=\"1\" fill=\"none\" fill-rule=\"evenodd\">\n                        <g id=\"usluge\" transform=\"translate(-392.000000, -676.000000)\" stroke=\"#FF5500\" stroke-width=\"5\">\n                            <g id=\"Group-5\" transform=\"translate(393.000000, 678.000000)\">\n                                <path d=\"M0,12 L56,11.5\" id=\"Line-2-Copy-7\"></path>\n                                <polyline id=\"Path-2-Copy-7\" transform=\"translate(51.500000, 12.500000) rotate(90.000000) translate(-51.500000, -12.500000) \" points=\"39 19 51.5 6 64 19\"></polyline>\n                            </g>\n                        </g>\n                    </g>\n                </svg>\n            </div>\n\n\n            <div class=\"mbr-col-sm-12 end mbr-col-md-6 mbr-col-lg-3\" mbr-if=\"cards > 2\">\n                <svg width=\"100%\" height=\"260px\" viewBox=\"0 0 232 269\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">\n                    <g id=\"dizajn\" stroke=\"none\" stroke-width=\"1\" fill=\"none\" fill-rule=\"evenodd\">\n                        <g id=\"usluge\" transform=\"translate(-454.000000, -556.000000)\">\n                            <g id=\"Group-6\" transform=\"translate(437.000000, 556.500000)\">\n                                <polygon id=\"Polygon\" fill=\"#FF5500\" points=\"134 0 250.047404 67 250.047404 201 134 268 17.9525959 201 17.9525959 67\">\n                                </polygon>\n\n                            </g>\n                        </g>\n                    </g>\n                </svg>\n                <h2 class=\"align-center mbr-fonts-style mbr-semibold\" mbr-theme-style=\"display-5\">Design</h2>\n                <svg mbr-if=\"cards > 3\" class=\"arrows\" width=\"63px\" height=\"29px\" viewBox=\"2 0 61 29\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">\n                    <g id=\"dizajn\" stroke=\"none\" stroke-width=\"1\" fill=\"none\" fill-rule=\"evenodd\">\n                        <g id=\"usluge\" transform=\"translate(-392.000000, -676.000000)\" stroke=\"#FF5500\" stroke-width=\"5\">\n                            <g id=\"Group-5\" transform=\"translate(393.000000, 678.000000)\">\n                                <path d=\"M0,12 L56,11.5\" id=\"Line-2-Copy-7\"></path>\n                                <polyline id=\"Path-2-Copy-7\" transform=\"translate(51.500000, 12.500000) rotate(90.000000) translate(-51.500000, -12.500000) \" points=\"39 19 51.5 6 64 19\"></polyline>\n                            </g>\n                        </g>\n                    </g>\n                </svg>\n            </div>\n            <div class=\"mbr-col-sm-12 mbr-col-md-6 mbr-col-lg-3\" mbr-if=\"cards > 3\">\n                <svg width=\"100%\" height=\"260px\" viewBox=\"0 0 232 269\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">\n                    <g id=\"dizajn\" stroke=\"none\" stroke-width=\"1\" fill=\"none\" fill-rule=\"evenodd\">\n                        <g id=\"usluge\" transform=\"translate(-454.000000, -556.000000)\">\n                            <g id=\"Group-6\" transform=\"translate(437.000000, 556.500000)\">\n                                <polygon id=\"Polygon\" fill=\"#FF5500\" points=\"134 0 250.047404 67 250.047404 201 134 268 17.9525959 201 17.9525959 67\">\n                                </polygon>\n\n                            </g>\n                        </g>\n                    </g>\n                </svg>\n                <h2 class=\"align-center mbr-fonts-style mbr-semibold\" mbr-theme-style=\"display-5\">Brand</h2>\n\n\n\n\n            </div>\n\n\n        </div>\n    </div>\n</section>",
+          "_anchor": "features1-2",
+          "_isUserblock": true,
+          "_sourceTheme": "insightamp",
+          "_cid": "rBL94gJK72",
+          "_PHPplaceholders": [],
+          "_JSplaceholders": [],
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 1rem)",
+            "padding-bottom": "(@paddingBottom * 1rem)",
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)",
+              "& when (@overlay)": {
+                ".mbr-overlay": {
+                  "background": "@overlayColor",
+                  "opacity": "@overlayOpacity"
+                }
+              }
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "a": {
+              "border-bottom": "2px solid @primaryColor",
+              "&:before": {
+                "content": "none"
+              }
+            },
+            ".mbr-col-lg-5": {
+              "margin": "auto 0"
+            },
+            ".mbr-col-md-10": {
+              "padding-bottom": "0.8rem"
+            },
+            ".image-block": {
+              "position": "relative",
+              "margin-bottom": "0.6rem",
+              "a": {
+                "border-bottom": "0px"
+              },
+              "&:after": {
+                "content": "''",
+                "position": "absolute",
+                "left": "0",
+                "top": "0",
+                "width": "0%",
+                "background": "@primaryColor",
+                "height": "100%",
+                "z-index": "1",
+                "transition": "all 0.3s",
+                "pointer-events": "none",
+                "opacity": "0.8"
+              },
+              "&:hover": {
+                "&:after": {
+                  "width": "100%"
+                }
+              }
+            }
+          },
+          "_name": "features8",
+          "_customHTML": "<section class=\"features8\" group=\"Features\" plugins=\"amp-main\">\n    <mbr-parameters>\n        <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <header>Size</header>\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n        <input type=\"range\" inline=\"\" title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"15\" step=\"1\" value=\"5\">\n        <input type=\"range\" inline=\"\" title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"15\" step=\"1\" value=\"5\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Title\" name=\"showSubTitle\" checked=\"\">\n        <input type=\"checkbox\" title=\"Text\" name=\"showText\" checked=\"\">\n        <input type=\"range\" inline=\"\" title=\"Items\" name=\"cards\" min=\"1\" max=\"3\" step=\"1\" value=\"3\">\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\" required=\"\">\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/background1.jpg\">\n            <input type=\"color\" title=\"Background Color\" value=\"#ffffff\" selected=\"\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked=\"\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay &amp;&amp; bg.type !== 'color'\">\n        <input type=\"range\" inline=\"\" title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.3\" condition=\"overlay &amp;&amp; bg.type !== 'color'\">\n        <!-- End block parameters -->\n    </mbr-parameters>\n    <div class=\"mbr-overlay\" mbr-if=\"overlay &amp;&amp; bg.type !== 'color'\"></div>\n    <div mbr-class=\"{'container':!fullWidth,\n                     'container-fluid': fullWidth}\">\n\n\n        <div class=\"mbr-row mbr-jc-c\">\n\n\n            <div class=\"mbr-col-sm-12 mbr-col-md-10 mbr-col-lg-4\" mbr-if=\"cards > 0\">\n                <div class=\"image-block\">\n                    <amp-img src=\"@PROJECT_PATH@/assets/images/01.jpg\" layout=\"responsive\" width=\"417\" height=\"278\" alt=\"image\" class=\"placeholder-loader\">\n                        <div placeholder=\"\" class=\"placeholder\"></div>\n                        <a href=\"#\"><img class=\"mbr-temp\" src=\"@PROJECT_PATH@/assets/images/01.jpg\" alt=\"\" title=\"\"></a>\n                    </amp-img>\n                </div>\n                <h2 class=\"align-left mbr-fonts-style mbr-pb-1 mbr-semibold\" mbr-theme-style=\"display-5\" mbr-if=\"showSubTitle\"><a href=\"#\">\n                        Discovery</a></h2>\n                <p class=\"mbr-text align-left mbr-fonts-style\" mbr-theme-style=\"display-4\" mbr-if=\"showText\" data-app-selector=\".mbr-section-btn, .mbr-text\">INTEGRATED DESIGN</p>\n            </div>\n\n\n            <div class=\"mbr-col-sm-12 mbr-col-md-10 mbr-col-lg-4\" mbr-if=\"cards > 1\">\n                <div class=\"image-block\">\n                    <amp-img src=\"@PROJECT_PATH@/assets/images/04.jpg\" layout=\"responsive\" width=\"417\" height=\"278\" alt=\"image\" class=\"placeholder-loader\">\n                        <div placeholder=\"\" class=\"placeholder\"></div>\n                        <a href=\"#\"><img class=\"mbr-temp\" src=\"@PROJECT_PATH@/assets/images/04.jpg\" alt=\"\" title=\"\"></a>\n                    </amp-img>\n                </div>\n                <h2 class=\"align-left mbr-fonts-style mbr-pb-1 mbr-semibold\" mbr-theme-style=\"display-5\" mbr-if=\"showSubTitle\">\n                    <a href=\"#\">Strategy</a></h2>\n                <p class=\"mbr-text align-left mbr-fonts-style\" mbr-theme-style=\"display-4\" mbr-if=\"showText\" data-app-selector=\".mbr-section-btn, .mbr-text\">BRANDING COMMUNICATIONS</p>\n            </div>\n\n\n\n            <div class=\"mbr-col-sm-12 mbr-col-md-10 mbr-col-lg-4\" mbr-if=\"cards > 2\">\n                <div class=\"image-block\">\n                    <amp-img src=\"@PROJECT_PATH@/assets/images/03.jpg\" layout=\"responsive\" width=\"417\" height=\"278\" alt=\"image\" class=\"placeholder-loader\">\n                        <div placeholder=\"\" class=\"placeholder\"></div>\n                        <a href=\"#\"><img class=\"mbr-temp\" src=\"@PROJECT_PATH@/assets/images/03.jpg\" alt=\"\" title=\"\"></a>\n                    </amp-img>\n                </div>\n                <h2 class=\"align-left mbr-fonts-style mbr-pb-1 mbr-semibold\" mbr-theme-style=\"display-5\" mbr-if=\"showSubTitle\"><a href=\"#\">\n                        Design</a></h2>\n                <p class=\"mbr-text align-left mbr-fonts-style\" mbr-theme-style=\"display-4\" mbr-if=\"showText\" data-app-selector=\".mbr-section-btn, .mbr-text\">VISUAL IDENTITY</p>\n            </div>\n\n\n        </div>\n    </div>\n</section>",
+          "_anchor": "features8-6",
+          "_isUserblock": true,
+          "_sourceTheme": "insightamp",
+          "_cid": "rBL952olUC",
+          "_PHPplaceholders": [],
+          "_JSplaceholders": [],
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 1rem)",
+            "padding-bottom": "(@paddingBottom * 1rem)",
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)",
+              "& when (@overlay)": {
+                ".mbr-overlay": {
+                  "background": "@overlayColor",
+                  "opacity": "@overlayOpacity"
+                }
+              }
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            ".image-block": {
+              "width": "300px",
+              "height": "300px",
+              "img": {
+                "object-fit": "cover"
+              },
+              "a": {
+                "&:before": {
+                  "content": "none"
+                }
+              }
+            },
+            ".content": {
+              "padding-top": "2rem",
+              "padding-left": "5rem",
+              "position": "relative",
+              "&:after": {
+                "content": "''",
+                "position": "absolute",
+                "width": "2px",
+                "height": "250px",
+                "background": "@primaryColor",
+                "left": "3rem",
+                "top": "-100px"
+              }
+            },
+            "p": {
+              "font-weight": "200"
+            },
+            "@media (max-width: 767px)": {
+              ".image-block": {
+                "width": "100%",
+                "height": "300px"
+              },
+              ".content": {
+                "padding-top": "2rem",
+                "padding-left": "2rem",
+                "&:after": {
+                  "left": "1rem"
+                }
+              }
+            },
+            ".mbr-title": {
+              "color": "#ff5500"
+            }
+          },
+          "_name": "team1",
+          "_customHTML": "<section class=\"header1\" group=\"Headers\" plugins=\"amp-main\">\n    <mbr-parameters>\n        <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <header>Size</header>\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"15\" step=\"1\" value=\"3\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"15\" step=\"1\" value=\"4\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Name\" name=\"showSubTitle\" checked>\n        <input type=\"checkbox\" title=\"Text\" name=\"showText\">\n        <input type=\"range\" inline title=\"Items\" name=\"cards\" min=\"1\" max=\"2\" step=\"1\" value=\"2\">\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\" required>\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/background1.jpg\">\n            <input type=\"color\" title=\"Background Color\" value=\"#ffffff\" selected>\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.3\" condition=\"overlay && bg.type !== 'color'\">\n        <!-- End block parameters -->\n    </mbr-parameters>\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\"></div>\n    <div mbr-class=\"{'container':!fullWidth,\n                     'container-fluid': fullWidth}\">\n\n\n        <div class=\"mbr-row mbr-jc-c\">\n            <div class=\"mbr-col-lg-12\" mbr-if=\"showTitle\">\n                <h1 class=\"mbr-title align-left mbr-fonts-style mbr-semibold mbr-pb-4\" mbr-theme-style=\"display-1\" data-app-selector=\".mbr-title\">A Few Mentors</h1>\n            </div>\n\n            <div class=\"mbr-col-sm-12 mbr-col-md-10 mbr-col-lg-6 md-pb\" mbr-if=\"cards > 0\">\n                <div class=\"image-block\">\n                    <amp-img src=\"@PROJECT_PATH@/assets/images/face1.jpg\" layout=\"responsive\" width=\"200\" height=\"300\" alt=\"image\" class=\"placeholder-loader\">\n                        <div placeholder class=\"placeholder\"></div>\n                        <a href=\"#\"><img class=\"mbr-temp\" src=\"@PROJECT_PATH@/assets/images/face1.jpg\" alt title></a>\n                    </amp-img>\n                </div>\n                <div class=\"content\" mbr-if=\"showSubTitle || showText\">\n                    <h2 class=\"align-left mbr-fonts-style mbr-pb-1 mbr-semibold\" mbr-theme-style=\"display-5\" mbr-if=\"showSubTitle\">Marina Burger</h2>\n                    <p class=\"mbr-text align-left mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-section-btn, .mbr-text\">Lorem ipsum dolor sit amet, consectetur\n                        adipiscing elit. Curabitur sit amet eleifend neque. Suspendisse ante arcu, elementum id est id,\n                        imperdiet viverra eros. Fusce ac vehicula enim. Suspendisse ut mollis massa. Sed vel purus nibh.\n                        Etiam id leo mi. Etiam volutpat iaculis vehicula.<br></p>\n                </div>\n            </div>\n\n\n            <div class=\"mbr-col-sm-12 mbr-col-md-10 mbr-col-lg-6 md-pb\" mbr-if=\"cards > 1\">\n                <div class=\"image-block\">\n                    <amp-img src=\"@PROJECT_PATH@/assets/images/face2.jpg\" layout=\"responsive\" width=\"300\" height=\"300\" alt=\"image\" class=\"placeholder-loader\">\n                        <div placeholder class=\"placeholder\"></div>\n                        <a href=\"#\"><img class=\"mbr-temp\" src=\"@PROJECT_PATH@/assets/images/face2.jpg\" alt title></a>\n                    </amp-img>\n                </div>\n                <div class=\"content\" mbr-if=\"showSubTitle || showText\">\n                    <h2 class=\"align-left mbr-fonts-style mbr-pb-1 mbr-semibold\" mbr-theme-style=\"display-5\" mbr-if=\"showSubTitle\">Jane Filetin</h2>\n                    <p class=\"mbr-text align-left mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-section-btn, .mbr-text\">Lorem ipsum dolor sit amet, consectetur\n                        adipiscing elit. Curabitur sit amet eleifend neque. Suspendisse ante arcu, elementum id est id,\n                        imperdiet viverra eros. Fusce ac vehicula enim. Suspendisse ut mollis massa. Sed vel purus nibh.\n                        Etiam id leo mi. Etiam volutpat iaculis vehicula.<br></p>\n                </div>\n\n\n            </div>\n\n        </div>\n    </div>\n</section>",
+          "_anchor": "team1-8",
+          "_isUserblock": true,
+          "_sourceTheme": "insightamp",
+          "_cid": "rBL95BcBH7",
+          "_PHPplaceholders": [],
+          "_JSplaceholders": [],
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            ".mbr-overlay": {
+              "background-color": "@overlayColor",
+              "opacity": "@overlayOpacity"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@customStyle)": {
+              ".form-control, .field-input": {
+                "padding": "0.5rem",
+                "background-color": "@fieldColor",
+                "border-color": "@borderColor",
+                "color": "@formText",
+                "transition": "0.4s",
+                "box-shadow": "none",
+                "outline": "none",
+                "input::-webkit-input-placeholder, textarea::-webkit-input-placeholder": {
+                  "color": "@formPlaceholder"
+                },
+                "input:-moz-placeholder, textarea:-moz-placeholder": {
+                  "color": "@formPlaceholder"
+                },
+                "&:hover, &:focus": {
+                  "background-color": "@fieldHover",
+                  "border-color": "@borderHover",
+                  "color": "contrast(@formText, #000000, #ffffff, 30%)",
+                  "box-shadow": "none",
+                  "outline": "none",
+                  "input::-webkit-input-placeholder, textarea::-webkit-input-placeholder": {
+                    "color": "contrast(@formPlaceholder, #000000, #ffffff, 30%)"
+                  },
+                  "input:-moz-placeholder, textarea:-moz-placeholder": {
+                    "color": "contrast(@formPlaceholder, #000000, #ffffff, 30%)"
+                  }
+                }
+              },
+              ".jq-number__spin:hover, .jq-number__spin:focus": {
+                "background-color": "@fieldHover",
+                "border-color": "@borderHover",
+                "color": "contrast(@formText, #000000, #ffffff, 30%)",
+                "box-shadow": "none",
+                "outline": "none"
+              },
+              ".jq-number__spin": {
+                "background-color": "@fieldColor",
+                "border-color": "@borderColor",
+                "color": "@formText",
+                "transition": "0.4s",
+                "box-shadow": "none",
+                "outline": "none"
+              },
+              ".jq-selectbox li, .jq-selectbox li": {
+                "background-color": "@fieldColor",
+                "color": "contrast(@fieldColor, #000000, #ffffff, 30%)"
+              },
+              ".jq-selectbox li:hover, .jq-selectbox li.selected": {
+                "background-color": "@fieldHover",
+                "color": "contrast(@fieldHover, #000000, #ffffff, 30%)"
+              },
+              ".jq-selectbox:hover .jq-selectbox__trigger-arrow, .jq-number__spin.minus:hover:after, .jq-number__spin.plus:hover:after": {
+                "border-top-color": "@fieldColor",
+                "border-bottom-color": "@fieldColor"
+              },
+              ".jq-selectbox .jq-selectbox__trigger-arrow, .jq-number__spin.minus:after, .jq-number__spin.plus:after": {
+                "border-top-color": "@fieldHover",
+                "border-bottom-color": "@fieldHover"
+              }
+            },
+            "& when (@customStyle), (@disableElements)": {
+              "input::-webkit-clear-button": {
+                "display": "none"
+              },
+              "input::-webkit-inner-spin-button": {
+                "display": "none"
+              },
+              "input::-webkit-outer-spin-button": {
+                "display": "none"
+              },
+              "input::-webkit-calendar-picker-indicator": {
+                "display": "none"
+              }
+            },
+            "H3": {
+              "text-align": "center"
+            },
+            ".btn": {
+              "&:hover": {
+                "animation-name": "hvr-wobble-vertical",
+                "animation-duration": "1s",
+                "animation-timing-function": "ease-in-out",
+                "animation-iteration-count": "1"
+              }
+            },
+            "@keyframes hvr-wobble-vertical": {
+              "16.65%": {
+                "transform": "translateY(8px)"
+              },
+              "33.3%": {
+                "transform": "translateY(-6px)"
+              },
+              "49.95%": {
+                "transform": "translateY(4px)"
+              },
+              "66.6%": {
+                "transform": "translateY(-2px)"
+              },
+              "83.25%": {
+                "transform": "translateY(1px)"
+              },
+              "to": {
+                "transform": "translateY(0)"
+              }
+            }
+          },
+          "_name": "form1",
+          "_customHTML": "<section class=\"form\" group=\"Form\" plugins=\"amp-main, amp-form, amp-mustache\">\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"range\" inline=\"\" title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"5\">\n        <input type=\"range\" inline=\"\" title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"5\">\n        <header>Style</header>\n        <input type=\"checkbox\" name=\"customStyle\" title=\"Custom Style\">\n        <input type=\"checkbox\" name=\"disableElements\" title=\"Disable Control\">\n        <input type=\"color\" name=\"fieldColor\" title=\"Field\" value=\"#ffffff\" condition=\"customStyle\">\n        <input type=\"color\" name=\"fieldHover\" title=\"Field Hover\" value=\"#efefef\" condition=\"customStyle\">\n        <input type=\"color\" name=\"borderColor\" title=\"Border\" value=\"#cccccc\" condition=\"customStyle\">\n        <input type=\"color\" name=\"borderHover\" title=\"Border Hover\" value=\"#000000\" condition=\"customStyle\">\n        <input type=\"color\" name=\"formText\" title=\"Text\" value=\"#000000\" condition=\"customStyle\">\n        <input type=\"color\" name=\"formPlaceholder\" title=\"Placeholders\" value=\"#c1c1c1\" condition=\"customStyle\">\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\">\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/background1.jpg\">\n            <input type=\"color\" title=\"Background Color\" value=\"#ffffff\" selected=\"\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked=\"\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay &amp;&amp; bg.type !== 'color'\">\n        <input type=\"range\" inline=\"\" title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.4\" condition=\"overlay &amp;&amp; bg.type !== 'color'\">\n    </mbr-parameters>\n    <div class=\"mbr-overlay\" mbr-if=\"(overlay &amp;&amp; bg.type=='image')\"></div>\n    <div class=\"container\">\n        <div class=\"row\">\n            <div mbr-form=\"\" class=\"col-lg-8 mx-auto mbr-form\">\n                <!--Formbuilder Form-->\n                <form action=\"\" name=\"Form Name\" method=\"POST\" class=\"mbr-form\">\n                    <div class=\"mbr-row\">\n                        <div submit-success=\"\" class=\"mbr-col-lg-12 mbr-col-md-12 mbr-col-sm-12\">\n                            <template data-form-alert=\"\" type=\"amp-mustache\">Thanks for filling out the form!</template>\n                        </div>\n                        <div submit-error=\"\" class=\"mbr-col-lg-12 mbr-col-md-12 mbr-col-sm-12\">\n                            <template data-form-alert=\"\" type=\"amp-mustache\">Thanks for filling out the form!</template>\n                        </div>\n                    </div>\n                    <div class=\"dragArea mbr-row\">\n                        <div class=\"mbr-col-lg-12 mbr-col-md-12 mbr-col-sm-12\">\n                            <h3 mbr-theme-style=\"display-2\" class=\"mbr-fonts-style mbr-pb-2 mbr-fonts-style mbr-fonts-style\"><b>Contact Us</b></h3>\n                        </div>\n                        <div data-for=\"form[data][0][1]\" class=\"mbr-col-lg-6 mbr-col-md-12 mbr-col-sm-12 field\">\n                            <input type=\"hidden\" name=\"form[data][0][0]\" value=\"first-name\">\n                            <input type=\"text\" name=\"form[data][0][1]\" placeholder=\"First Name\" data-form-field=\"first-name\" mbr-theme-style=\"display-7\" class=\"field-input\" value=\"\">\n                        </div>\n                        <div data-for=\"form[data][1][1]\" class=\"mbr-col-lg-6 mbr-col-md-12 mbr-col-sm-12 field\">\n                            <input type=\"hidden\" name=\"form[data][1][0]\" value=\"last-mane\">\n                            <input type=\"text\" name=\"form[data][1][1]\" placeholder=\"Last Name\" data-form-field=\"last-mane\" mbr-theme-style=\"display-7\" class=\"field-input\" value=\"\">\n                        </div>\n                        <div data-for=\"form[data][2][1]\" class=\"mbr-col-lg-6 mbr-col-md-12 mbr-col-sm-12 field\">\n                            <input type=\"hidden\" name=\"form[data][2][0]\" value=\"email\">\n                            <input type=\"email\" name=\"form[data][2][1]\" placeholder=\"Email\" data-form-field=\"email\" mbr-theme-style=\"display-7\" class=\"field-input\" value=\"\">\n                        </div>\n                        <div class=\"mbr-col-lg-6 mbr-col-md-12 mbr-col-sm-12 field\" data-for=\"form[data][3][1]\">\n                            <input type=\"hidden\" name=\"form[data][3][0]\" value=\"phone\">\n                            <input type=\"tel\" name=\"form[data][3][1]\" placeholder=\"Phone\" pattern=\"[0-9]{3}-[0-9]{3}-[0-9]{4}\" data-form-field=\"phone\" mbr-theme-style=\"display-7\" class=\"field-input\" value=\"\">\n                        </div>\n                        <div class=\"mbr-col-lg-12 mbr-col-md-12 mbr-col-sm-12 field\" data-for=\"form[data][4][1]\">\n                            <input type=\"hidden\" name=\"form[data][4][0]\" value=\"message\">\n                            <textarea name=\"form[data][4][1]\" placeholder=\"Message\" data-form-field=\"message\" mbr-theme-style=\"display-7\" class=\"field-input\"></textarea>\n                        </div>\n                        <div mbr-buttons=\"true\" mbr-theme-style=\"display-7\" data-toolbar=\"-mbrBtnMove,-mbrLink,-mbrBtnRemove,-mbrBtnAdd\" class=\"mbr-col-auto mbr-m-auto\"><a type=\"submit\" class=\"btn btn-primary\" data-app-placeholder=\"Type Text\">Submit</a></div>\n                    </div>\n                </form>\n                <!--Formbuilder Form-->\n            </div>\n        </div>\n    </div>\n</section>",
+          "_anchor": "form1-9",
+          "_isUserblock": true,
+          "_sourceTheme": "insightamp",
+          "_cid": "rBL95RrMUX",
+          "_PHPplaceholders": [],
+          "_JSplaceholders": [],
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 1rem)",
+            "padding-bottom": "(@paddingBottom * 1rem)",
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)",
+              "& when (@overlay)": {
+                ".mbr-overlay": {
+                  "background": "@overlayColor",
+                  "opacity": "@overlayOpacity"
+                }
+              }
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "a": {
+              "&:before": {
+                "height": "2px"
+              }
+            },
+            "p": {
+              "line-height": "1.6"
+            }
+          },
+          "_name": "footer3",
+          "_customHTML": "<section class=\"header1\" group=\"Headers\" plugins=\"amp-main\">\n    <mbr-parameters>\n        <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <header>Size</header>\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"15\" step=\"1\" value=\"5\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"15\" step=\"1\" value=\"5\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Text\" name=\"showText\" checked>\n        <input type=\"checkbox\" title=\"Title\" name=\"showSubTitle\" checked>\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\" required>\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/background1.jpg\">\n            <input type=\"color\" title=\"Background Color\" value=\"#ffffff\" selected>\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.3\" condition=\"overlay && bg.type !== 'color'\">\n        <!-- End block parameters -->\n    </mbr-parameters>\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\"></div>\n    <div mbr-class=\"{'container':!fullWidth,\n\t\t\t\t\t\t\t\t\t 'container-fluid': fullWidth}\">\n\n\n\n        <div class=\"mbr-row mbr-jc-e\">\n\n            <div class=\"mbr-col-sm-12 mbr-col-md-12 mbr-col-lg-3 md-pb\">\n                <h2 class=\"align-left mbr-pb-2 mbr-fonts-style mbr-bold md-pb\" mbr-theme-style=\"display-2\">Acadium</h2>\n            </div>\n            <div class=\"mbr-col-sm-12 mbr-col-md-12 mbr-col-lg-3 md-pb\">\n                <h3 class=\"align-left mbr-pb-2 mbr-fonts-style mbr-bold md-pb\" mbr-theme-style=\"display-5\" mbr-if=\"showSubTitle\">Office</h3>\n                <p class=\"mbr-text align-left mbr-pb-2 mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text, .mbr-section-btn\">451 Mission Street <br>San Francisco, CA<br>USA</p>\n            </div>\n\n            <div class=\"mbr-col-sm-12 mbr-col-md-12 mbr-col-lg-3 md-pb\">\n                <h3 class=\"align-left mbr-pb-2 mbr-fonts-style mbr-bold md-pb\" mbr-theme-style=\"display-5\" mbr-if=\"showSubTitle\"></h3>\n                <p class=\"mbr-text align-left mbr-pb-2 mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text, .mbr-section-btn\"></p>\n            </div>\n\n            <div class=\"mbr-col-sm-12 mbr-col-md-12 mbr-col-lg-3 md-pb\">\n\n\n                <p class=\"mbr-text mbr-semibold align-left mbr-fonts-style\" mbr-theme-style=\"display-5\" data-app-selector=\".mbr-text\"><a href=\"#\">info@site.com</a><br></p>\n            </div>\n\n            <div class=\"mbr-col-sm-12 mbr-col-md-12 mbr-col-lg-9\">\n\n                <p class=\"mbr-text2 align-left mbr-pt-3 mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text2\" mbr-if=\"showText\"></p>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_anchor": "footer3-a",
+          "_isUserblock": true,
+          "_sourceTheme": "insightamp",
+          "_cid": "rBL966PCyS",
+          "_PHPplaceholders": [],
+          "_JSplaceholders": [],
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "background-color": "@menuBgColor",
+            "overflow": "visible",
+            ".navbar": {
+              "background": "@menuBgColor"
+            },
+            "& when not (@showBrand) and not (@showLogo)": {
+              ".navbar > .container, .navbar > .container-fluid": {
+                "justify-content": "flex-end !important"
+              }
+            },
+            "& when (@showLogo)": {
+              ".navbar-brand": {
+                ".navbar-logo": {
+                  "max-height": "60px",
+                  "min-width": "30px",
+                  "max-width": "60px",
+                  "amp-img, img": {
+                    "object-fit": "contain!important"
+                  }
+                }
+              }
+            },
+            "a": {
+              "&:before": {
+                "content": "none"
+              }
+            },
+            ".dropdown-item, .nav-link, .navbar-caption": {
+              "&:hover, &:active": {
+                "color": "@secondaryColor !important"
+              }
+            },
+            "& when (@showBrand)": {
+              ".navbar-caption": {
+                "line-height": "inherit !important"
+              }
+            },
+            ".navbar .navbar-collapse": {
+              "@media (max-width: 991px)": {
+                "background": "@menuBgColor",
+                "& when (@sidebarSide = 'left')": {
+                  "right": "auto",
+                  "left": "0"
+                }
+              }
+            },
+            "& when (@showItems)": {
+              ".nav-link": {
+                "margin": ".667em 1em !important",
+                "padding": "0 !important"
+              },
+              ".dropdown-item.active, .dropdown-item:active": {
+                "background-color": "transparent"
+              },
+              ".dropdown-menu": {
+                "background": "@menuBgColor"
+              }
+            },
+            ".hamburger span": {
+              "background-color": "@hamburgerColor"
+            },
+            ".builder-sidebar": {
+              "background-color": "@menuBgColor"
+            },
+            ".close-sidebar": {
+              "&:focus": {
+                "outline": "2px auto @primaryColor"
+              },
+              "span": {
+                "background-color": "@hamburgerColor"
+              }
+            },
+            "& when (@showSocial)": {
+              "& when (@showItems)": {
+                ".menu-social-list": {
+                  "@media (min-width: 992px)": {
+                    "padding-left": "1rem"
+                  },
+                  "@media (max-width: 991px)": {
+                    "padding-top": ".5rem"
+                  }
+                }
+              },
+              "& when (@showButtons)": {
+                ".menu-social-list": {
+                  "@media (max-width: 991px)": {
+                    "padding-bottom": ".5rem"
+                  }
+                }
+              }
+            },
+            ".iconfont-wrapper": {
+              "height": "1.3rem",
+              "width": "1.3rem",
+              "display": "inline-block",
+              ".amp-iconfont": {
+                "vertical-align": "middle",
+                "font-size": "1.3rem",
+                "width": "1.3rem"
+              }
+            }
+          },
+          "_name": "menu1",
+          "_customHTML": "<section class=\"menu1 menu horizontal-menu\" group=\"Menu\" plugins=\"DropDown, amp-main, amp-sidebar\" always-top=\"\" global=\"\" once=\"menu\">\n\t<mbr-parameters>\n\t\t<!-- Block parameters controls (Blue \"Gear\" panel) -->\n\t\t<!--  -->\n\t\t<header>Size</header>\n\t\t<input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n\t\t<input type=\"checkbox\" title=\"Sticky Position\" name=\"sticky\" checked=\"\">\n\t\t<!--  -->\n\t\t<header>Show/Hide</header>\n\t\t<input type=\"checkbox\" title=\"Show Logo\" name=\"showLogo\" checked=\"\">\n\t\t<input type=\"checkbox\" title=\"Show Brand Name\" name=\"showBrand\">\n\t\t<input type=\"checkbox\" title=\"Show Menu Items\" name=\"showItems\" checked=\"\">\n\t\t<input type=\"checkbox\" title=\"Show Button(s)\" name=\"showButtons\">\n\t\t<input type=\"checkbox\" title=\"Show Social\" name=\"showSocial\">\n\t\t<input type=\"range\" inline=\"\" title=\"Icons Count\" name=\"socialCount\" min=\"1\" max=\"6\" value=\"2\" step=\"1\" condition=\"showSocial\">\n\t\t<header>Sidebar</header>\n\t\t<select title=\"Side\" name=\"sidebarSide\">\n\t\t\t<option value=\"left\">Left</option>\n\t\t\t<option value=\"right\" selected=\"\">Right</option>\n\t\t</select>\n\t\t<input type=\"color\" title=\"Hamburger Color\" name=\"hamburgerColor\" value=\"#232323\">\n\t\t<header>Background</header>\n\t\t<input type=\"color\" title=\"Background Color\" name=\"menuBgColor\" value=\"#ffffff\" required=\"\">\n\t\t<!-- End block parameters -->\n\t</mbr-parameters>\n\t<!-- <div class=\"menu-wrapper\"> -->\n\t<nav class=\"navbar navbar-dropdown navbar-expand-lg\" mbr-class=\"{'navbar-fixed-top': sticky}\">\n\t\t<div class=\"menu-container\" mbr-class=\"{'container': !fullWidth,\n\t\t\t\t\t\t'container-fluid': fullWidth,\n\t\t\t\t\t\t'mbr-jc-e': !showLogo &amp;&amp; !showBrand}\">\n\t\t\t<!-- SHOW LOGO -->\n\t\t\t<div class=\"navbar-brand\" mbr-if=\"showLogo || showBrand\">\n\t\t\t\t<div mbr-if=\"showLogo\" class=\"navbar-logo\">\n\t\t\t\t\t<amp-img src=\"@PROJECT_PATH@/assets/images/acadium-primarylogo-red-1-120x25.png\" layout=\"responsive\" height=\"50\" width=\"240\" alt=\"image\" class=\"placeholder-loader\">\n\t\t\t\t\t\t<div placeholder=\"\" class=\"placeholder\"></div>\n\t\t\t\t\t\t<img class=\"mbr-temp\" src=\"@PROJECT_PATH@/assets/images/acadium-primarylogo-red-1-120x25.png\" alt=\"\" title=\"\">\n\t\t\t\t\t</amp-img>\n\t\t\t\t</div>\n\t\t\t\t<span mbr-if=\"showBrand\" mbr-buttons=\"\" mbr-theme-style=\"display-5\" class=\"navbar-caption-wrap\" data-toolbar=\"-mbrBtnMove,-mbrBtnAdd,-mbrBtnRemove\"><a class=\"navbar-caption mbr-semibold text-black\" data-app-selector=\".navbar-caption\" href=\"https://mobiri.se\" data-app-placeholder=\"Type Text\"></a></span>\n\t\t\t</div>\n\t\t\t<!-- SHOW LOGO END -->\n\t\t\t<!-- COLLAPSED MENU -->\n\t\t\t<div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\n\t\t\t\t<button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarNavAltMarkup\" aria-expanded=\"false\" aria-label=\"Toggle navigation\" mbr-if=\"showItems || showSocial || showButtons\">\n\t\t\t\t\t<div class=\"hamburger\">\n\t\t\t\t\t\t<span></span>\n\t\t\t\t\t\t<span></span>\n\t\t\t\t\t\t<span></span>\n\t\t\t\t\t\t<span></span>\n\t\t\t\t\t</div>\n\t\t\t\t</button>\n\t\t\t\t<!-- NAVBAR ITEMS -->\n\t\t\t\t<ul mbr-menu=\"\" class=\"navbar-nav nav-dropdown\" mbr-theme-style=\"display-7\" mbr-if=\"showItems\" mbr-class=\"{'nav-right': !showButtons,'navbar-nav-top-padding': isPublish &amp;&amp; !showBrand &amp;&amp; !showLogo}\"><li class=\"nav-item\"><a class=\"nav-link mbr-semibold link text-black\" href=\"https://mobiri.se\" data-app-selector=\".nav-link,.dropdown-item\" data-app-placeholder=\"Type Text\">Mentors</a></li>\n\t\t\t\t\t<li class=\"nav-item\">\n\t\t\t\t\t\t<a class=\"nav-link mbr-semibold link text-black\" href=\"https://mobiri.se\" data-app-selector=\".nav-link,.dropdown-item\" data-app-placeholder=\"Type Text\">Mentees</a>\n\t\t\t\t\t</li>\n\t\t\t\t\t\n\n\n\t\t\t\t\t<li class=\"nav-item\">\n\t\t\t\t\t\t<a class=\"nav-link mbr-semibold link text-black\" href=\"https://acadium.com/blog/\" data-app-selector=\".nav-link,.dropdown-item\" data-app-placeholder=\"Type Text\" target=\"_blank\">Blog</a>\n\t\t\t\t\t</li>\n\t\t\t\t\t<li class=\"nav-item\"><a class=\"nav-link mbr-semibold link text-black\" href=\"https://mobiri.se\" data-app-selector=\".nav-link,.dropdown-item\" data-app-placeholder=\"Type Text\">Help</a></li></ul>\n\t\t\t\t<!-- NAVBAR ITEMS END -->\n\t\t\t\t<!-- SOCIAL ICON -->\n\t\t\t\t<div class=\"menu-social-list\" mbr-if=\"showSocial\" mbr-list=\"\" mbr-list-grow=\"socialCount\" mbr-link-type=\"socials\">\n\t\t\t\t\t<a href=\"https://twitter.com/8bsite\" target=\"_blank\" class=\"iconfont-wrapper\">\n\t\t\t\t\t\t<span mbr-icon=\"\" class=\"amp-iconfont animation-normal fa-twitter-square fa\"></span>\n\t\t\t\t\t</a>\n\t\t\t\t\t<a href=\"https://www.facebook.com/8bsite/\" target=\"_blank\" class=\"iconfont-wrapper\">\n\t\t\t\t\t\t<span mbr-icon=\"\" class=\"amp-iconfont animation-normal fa-instagram fa\"></span>\n\t\t\t\t\t</a>\n\n\n\n\t\t\t\t</div>\n\t\t\t\t<!-- SOCIAL ICON END -->\n\t\t\t\t<!-- SHOW BUTTON -->\n\t\t\t\t<div mbr-if=\"showButtons\" mbr-buttons=\"\" mbr-theme-style=\"display-7\" class=\"navbar-buttons mbr-section-btn\"><a class=\"btn btn-md btn-black mbr-semibold\" href=\"https://mobiri.se\" data-app-placeholder=\"Type Text\">Shop\n\t\t\t\t\t\tNow</a></div>\n\t\t\t\t<!-- SHOW BUTTON END -->\n\t\t\t</div>\n\t\t\t<!-- COLLAPSED MENU END -->\n\t\t\t<button class=\"navbar-toggler hide\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarNavAltMarkup\" aria-expanded=\"false\" aria-label=\"Toggle navigation\" mbr-if=\"showItems || showSocial || showButtons\">\n\t\t\t\t<div class=\"hamburger\">\n\t\t\t\t\t<span></span>\n\t\t\t\t\t<span></span>\n\t\t\t\t\t<span></span>\n\t\t\t\t\t<span></span>\n\t\t\t\t</div>\n\t\t\t</button>\n\t\t\t<button on=\"tap:sidebar.toggle\" class=\"ampstart-btn hamburger\" mbr-if=\"(showItems||showButtons)\">\n\t\t\t\t<span></span>\n\t\t\t\t<span></span>\n\t\t\t\t<span></span>\n\t\t\t\t<span></span>\n\t\t\t</button>\n\t\t</div>\n\t</nav>\n\t<!-- AMP plug -->\n\t<amp-sidebar id=\"sidebar\" layout=\"nodisplay\" side=\"{{sidebarSide}}\">\n\t\t<div class=\"builder-sidebar\" id=\"builder-sidebar\">\n\t\t\t<button on=\"tap:sidebar.close\" class=\"close-sidebar\">\n\t\t\t\t<span></span>\n\t\t\t\t<span></span>\n\t\t\t</button>\n\t\t</div>\n\t</amp-sidebar>\n\t<!-- </div> -->\n</section>",
+          "_cid": "rBL9b14tv4",
+          "_anchor": "menu1-c",
+          "_protectedParams": [],
+          "_global": true,
+          "_once": "menu",
+          "_params": {}
+        }
+      ]
+    },
+    "help.html": {
+      "settings": {
+        "title": "Support Center",
+        "order": 1,
+        "meta_descr": "Need support? You're in the right place!"
+      },
+      "components": [
+        {
+          "alias": false,
+          "_styles": {
+            "background-color": "@menuBgColor",
+            "overflow": "visible",
+            ".navbar": {
+              "background": "@menuBgColor"
+            },
+            "& when not (@showBrand) and not (@showLogo)": {
+              ".navbar > .container, .navbar > .container-fluid": {
+                "justify-content": "flex-end !important"
+              }
+            },
+            "& when (@showLogo)": {
+              ".navbar-brand": {
+                ".navbar-logo": {
+                  "max-height": "60px",
+                  "min-width": "30px",
+                  "max-width": "60px",
+                  "amp-img, img": {
+                    "object-fit": "contain!important"
+                  }
+                }
+              }
+            },
+            "a": {
+              "&:before": {
+                "content": "none"
+              }
+            },
+            ".dropdown-item, .nav-link, .navbar-caption": {
+              "&:hover, &:active": {
+                "color": "@secondaryColor !important"
+              }
+            },
+            "& when (@showBrand)": {
+              ".navbar-caption": {
+                "line-height": "inherit !important"
+              }
+            },
+            ".navbar .navbar-collapse": {
+              "@media (max-width: 991px)": {
+                "background": "@menuBgColor",
+                "& when (@sidebarSide = 'left')": {
+                  "right": "auto",
+                  "left": "0"
+                }
+              }
+            },
+            "& when (@showItems)": {
+              ".nav-link": {
+                "margin": ".667em 1em !important",
+                "padding": "0 !important"
+              },
+              ".dropdown-item.active, .dropdown-item:active": {
+                "background-color": "transparent"
+              },
+              ".dropdown-menu": {
+                "background": "@menuBgColor"
+              }
+            },
+            ".hamburger span": {
+              "background-color": "@hamburgerColor"
+            },
+            ".builder-sidebar": {
+              "background-color": "@menuBgColor"
+            },
+            ".close-sidebar": {
+              "&:focus": {
+                "outline": "2px auto @primaryColor"
+              },
+              "span": {
+                "background-color": "@hamburgerColor"
+              }
+            },
+            "& when (@showSocial)": {
+              "& when (@showItems)": {
+                ".menu-social-list": {
+                  "@media (min-width: 992px)": {
+                    "padding-left": "1rem"
+                  },
+                  "@media (max-width: 991px)": {
+                    "padding-top": ".5rem"
+                  }
+                }
+              },
+              "& when (@showButtons)": {
+                ".menu-social-list": {
+                  "@media (max-width: 991px)": {
+                    "padding-bottom": ".5rem"
+                  }
+                }
+              }
+            },
+            ".iconfont-wrapper": {
+              "height": "1.3rem",
+              "width": "1.3rem",
+              "display": "inline-block",
+              ".amp-iconfont": {
+                "vertical-align": "middle",
+                "font-size": "1.3rem",
+                "width": "1.3rem"
+              }
+            }
+          },
+          "_name": "menu1",
+          "_customHTML": "<section class=\"menu1 menu horizontal-menu\" group=\"Menu\" plugins=\"DropDown, amp-main, amp-sidebar\" always-top=\"\" global=\"\" once=\"menu\">\n\t<mbr-parameters>\n\t\t<!-- Block parameters controls (Blue \"Gear\" panel) -->\n\t\t<!--  -->\n\t\t<header>Size</header>\n\t\t<input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n\t\t<input type=\"checkbox\" title=\"Sticky Position\" name=\"sticky\" checked=\"\">\n\t\t<!--  -->\n\t\t<header>Show/Hide</header>\n\t\t<input type=\"checkbox\" title=\"Show Logo\" name=\"showLogo\" checked=\"\">\n\t\t<input type=\"checkbox\" title=\"Show Brand Name\" name=\"showBrand\">\n\t\t<input type=\"checkbox\" title=\"Show Menu Items\" name=\"showItems\" checked=\"\">\n\t\t<input type=\"checkbox\" title=\"Show Button(s)\" name=\"showButtons\">\n\t\t<input type=\"checkbox\" title=\"Show Social\" name=\"showSocial\">\n\t\t<input type=\"range\" inline=\"\" title=\"Icons Count\" name=\"socialCount\" min=\"1\" max=\"6\" value=\"2\" step=\"1\" condition=\"showSocial\">\n\t\t<header>Sidebar</header>\n\t\t<select title=\"Side\" name=\"sidebarSide\">\n\t\t\t<option value=\"left\">Left</option>\n\t\t\t<option value=\"right\" selected=\"\">Right</option>\n\t\t</select>\n\t\t<input type=\"color\" title=\"Hamburger Color\" name=\"hamburgerColor\" value=\"#232323\">\n\t\t<header>Background</header>\n\t\t<input type=\"color\" title=\"Background Color\" name=\"menuBgColor\" value=\"#ffffff\" required=\"\">\n\t\t<!-- End block parameters -->\n\t</mbr-parameters>\n\t<!-- <div class=\"menu-wrapper\"> -->\n\t<nav class=\"navbar navbar-dropdown navbar-expand-lg\" mbr-class=\"{'navbar-fixed-top': sticky}\">\n\t\t<div class=\"menu-container\" mbr-class=\"{'container': !fullWidth,\n\t\t\t\t\t\t'container-fluid': fullWidth,\n\t\t\t\t\t\t'mbr-jc-e': !showLogo &amp;&amp; !showBrand}\">\n\t\t\t<!-- SHOW LOGO -->\n\t\t\t<div class=\"navbar-brand\" mbr-if=\"showLogo || showBrand\">\n\t\t\t\t<div mbr-if=\"showLogo\" class=\"navbar-logo\">\n\t\t\t\t\t<amp-img src=\"@PROJECT_PATH@/assets/images/acadium-primarylogo-red-1-120x25.png\" layout=\"responsive\" height=\"50\" width=\"240\" alt=\"image\" class=\"placeholder-loader\">\n\t\t\t\t\t\t<div placeholder=\"\" class=\"placeholder\"></div>\n\t\t\t\t\t\t<img class=\"mbr-temp\" src=\"@PROJECT_PATH@/assets/images/acadium-primarylogo-red-1-120x25.png\" alt=\"\" title=\"\">\n\t\t\t\t\t</amp-img>\n\t\t\t\t</div>\n\t\t\t\t<span mbr-if=\"showBrand\" mbr-buttons=\"\" mbr-theme-style=\"display-5\" class=\"navbar-caption-wrap\" data-toolbar=\"-mbrBtnMove,-mbrBtnAdd,-mbrBtnRemove\"><a class=\"navbar-caption mbr-semibold text-black\" data-app-selector=\".navbar-caption\" href=\"https://mobiri.se\" data-app-placeholder=\"Type Text\"></a></span>\n\t\t\t</div>\n\t\t\t<!-- SHOW LOGO END -->\n\t\t\t<!-- COLLAPSED MENU -->\n\t\t\t<div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\n\t\t\t\t<button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarNavAltMarkup\" aria-expanded=\"false\" aria-label=\"Toggle navigation\" mbr-if=\"showItems || showSocial || showButtons\">\n\t\t\t\t\t<div class=\"hamburger\">\n\t\t\t\t\t\t<span></span>\n\t\t\t\t\t\t<span></span>\n\t\t\t\t\t\t<span></span>\n\t\t\t\t\t\t<span></span>\n\t\t\t\t\t</div>\n\t\t\t\t</button>\n\t\t\t\t<!-- NAVBAR ITEMS -->\n\t\t\t\t<ul mbr-menu=\"\" class=\"navbar-nav nav-dropdown\" mbr-theme-style=\"display-7\" mbr-if=\"showItems\" mbr-class=\"{'nav-right': !showButtons,'navbar-nav-top-padding': isPublish &amp;&amp; !showBrand &amp;&amp; !showLogo}\"><li class=\"nav-item\"><a class=\"nav-link mbr-semibold link text-black\" href=\"https://mobiri.se\" data-app-selector=\".nav-link,.dropdown-item\" data-app-placeholder=\"Type Text\">Mentors</a></li>\n\t\t\t\t\t<li class=\"nav-item\">\n\t\t\t\t\t\t<a class=\"nav-link mbr-semibold link text-black\" href=\"https://mobiri.se\" data-app-selector=\".nav-link,.dropdown-item\" data-app-placeholder=\"Type Text\">Mentees</a>\n\t\t\t\t\t</li>\n\t\t\t\t\t\n\n\n\t\t\t\t\t<li class=\"nav-item\">\n\t\t\t\t\t\t<a class=\"nav-link mbr-semibold link text-black\" href=\"https://acadium.com/blog/\" data-app-selector=\".nav-link,.dropdown-item\" data-app-placeholder=\"Type Text\" target=\"_blank\">Blog</a>\n\t\t\t\t\t</li>\n\t\t\t\t\t<li class=\"nav-item\"><a class=\"nav-link mbr-semibold link text-black\" href=\"https://mobiri.se\" data-app-selector=\".nav-link,.dropdown-item\" data-app-placeholder=\"Type Text\">Help</a></li></ul>\n\t\t\t\t<!-- NAVBAR ITEMS END -->\n\t\t\t\t<!-- SOCIAL ICON -->\n\t\t\t\t<div class=\"menu-social-list\" mbr-if=\"showSocial\" mbr-list=\"\" mbr-list-grow=\"socialCount\" mbr-link-type=\"socials\">\n\t\t\t\t\t<a href=\"https://twitter.com/8bsite\" target=\"_blank\" class=\"iconfont-wrapper\">\n\t\t\t\t\t\t<span mbr-icon=\"\" class=\"amp-iconfont animation-normal fa-twitter-square fa\"></span>\n\t\t\t\t\t</a>\n\t\t\t\t\t<a href=\"https://www.facebook.com/8bsite/\" target=\"_blank\" class=\"iconfont-wrapper\">\n\t\t\t\t\t\t<span mbr-icon=\"\" class=\"amp-iconfont animation-normal fa-instagram fa\"></span>\n\t\t\t\t\t</a>\n\n\n\n\t\t\t\t</div>\n\t\t\t\t<!-- SOCIAL ICON END -->\n\t\t\t\t<!-- SHOW BUTTON -->\n\t\t\t\t<div mbr-if=\"showButtons\" mbr-buttons=\"\" mbr-theme-style=\"display-7\" class=\"navbar-buttons mbr-section-btn\"><a class=\"btn btn-md btn-black mbr-semibold\" href=\"https://mobiri.se\" data-app-placeholder=\"Type Text\">Shop\n\t\t\t\t\t\tNow</a></div>\n\t\t\t\t<!-- SHOW BUTTON END -->\n\t\t\t</div>\n\t\t\t<!-- COLLAPSED MENU END -->\n\t\t\t<button class=\"navbar-toggler hide\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarNavAltMarkup\" aria-expanded=\"false\" aria-label=\"Toggle navigation\" mbr-if=\"showItems || showSocial || showButtons\">\n\t\t\t\t<div class=\"hamburger\">\n\t\t\t\t\t<span></span>\n\t\t\t\t\t<span></span>\n\t\t\t\t\t<span></span>\n\t\t\t\t\t<span></span>\n\t\t\t\t</div>\n\t\t\t</button>\n\t\t\t<button on=\"tap:sidebar.toggle\" class=\"ampstart-btn hamburger\" mbr-if=\"(showItems||showButtons)\">\n\t\t\t\t<span></span>\n\t\t\t\t<span></span>\n\t\t\t\t<span></span>\n\t\t\t\t<span></span>\n\t\t\t</button>\n\t\t</div>\n\t</nav>\n\t<!-- AMP plug -->\n\t<amp-sidebar id=\"sidebar\" layout=\"nodisplay\" side=\"{{sidebarSide}}\">\n\t\t<div class=\"builder-sidebar\" id=\"builder-sidebar\">\n\t\t\t<button on=\"tap:sidebar.close\" class=\"close-sidebar\">\n\t\t\t\t<span></span>\n\t\t\t\t<span></span>\n\t\t\t</button>\n\t\t</div>\n\t</amp-sidebar>\n\t<!-- </div> -->\n</section>",
+          "_cid": "rBL9b14tv4",
+          "_protectedParams": [],
+          "_global": true,
+          "_once": "menu",
+          "_params": {},
+          "_anchor": "menu1-3"
+        },
+        {
+          "_customTemplate": true,
+          "_afterNavbarItem": false,
+          "_customHTML": "\n\n\n\n  <meta charset=\"utf-8\">\n  <!-- v18424 -->\n\n  <title>Submit a request – Acadium Help Centre</title>\n\n  <meta name=\"csrf-param\" content=\"authenticity_token\">\n<meta name=\"csrf-token\" content=\"\">\n\n  <link href=\"https://support.acadium.com/hc/en-us/requests/new\" rel=\"canonical\">\n\n  <link rel=\"stylesheet\" media=\"all\" href=\"//static.zdassets.com/hc/assets/application-ebbf4a70487f9466c9be47bf4b6055f6.css\" id=\"stylesheet\">\n    <!-- Entypo pictograms by Daniel Bruce — www.entypo.com -->\n    <link rel=\"stylesheet\" media=\"all\" href=\"//static.zdassets.com/hc/assets/theming_v1_support-7eacdab8920220a42cfc91404f4ed182.css\">\n  <link rel=\"stylesheet\" type=\"text/css\" href=\"//p19.zdassets.com/hc/theming_assets/9329418/360002692693/style.css?digest=360423460354\">\n\n  <link rel=\"shortcut icon\" type=\"image/x-icon\" href=\"//theme.zdassets.com/theme_assets/9329418/06b0778aec0fc9d7cd5f002e879b40b5353e32b1.png\">\n\n    [JS_CODE_0]\n    [JS_CODE_1]\n\n\n  <meta content=\"width=device-width, initial-scale=1.0\" name=\"viewport\">\n\n  [JS_CODE_2]\n\n\n  \n  \n\n  <header class=\"header\">\n  <div class=\"logo\">\n    <a title=\"Home\" href=\"/hc/en-us\">\n      <img src=\"//theme.zdassets.com/theme_assets/9329418/85da47edeb54dcc4e171497f6dde730d607cf55d.svg\" alt=\"Acadium Help Centre Help Center home page\">\n    </a>\n  </div>\n  <div class=\"nav-wrapper\">\n    <span class=\"icon-menu\" tabindex=\"0\" role=\"button\" aria-controls=\"user-nav\" aria-expanded=\"false\" aria-label=\"Toggle navigation menu\"></span>\n    <nav class=\"user-nav\" id=\"user-nav\">\n      \n      <a class=\"submit-a-request\" href=\"/hc/en-us/requests/new\">Submit a request</a>\n    </nav>\n      <a class=\"login\" data-auth-action=\"signin\" role=\"button\" rel=\"nofollow\" title=\"Opens a dialog\" href=\"/hc/en-us/signin?return_to=https%3A%2F%2Fsupport.acadium.com%2Fhc%2Fen-us%2Frequests%2Fnew&amp;locale=en-us\">Sign in</a>\n\n  </div>\n</header>\n\n\n  <main role=\"main\">\n    <div class=\"container-divider\"></div>\n<div class=\"container\">\n  <nav class=\"sub-nav\">\n    <ol class=\"breadcrumbs\">\n  \n    <li title=\"Acadium Help Centre\">\n      \n        <a href=\"/hc/en-us\">Acadium Help Centre</a>\n      \n    </li>\n  \n    <li title=\"Submit a request\">\n      \n        Submit a request\n      \n    </li>\n  \n</ol>\n\n    <form role=\"search\" class=\"search\" data-search=\"\" action=\"/hc/en-us/search\" accept-charset=\"UTF-8\" method=\"get\"><input name=\"utf8\" type=\"hidden\" value=\"✓\"><input type=\"search\" name=\"query\" id=\"query\" placeholder=\"Search\" aria-label=\"Search\"></form>\n  </nav>\n\n  <h1>\n    Submit a request\n    \n  </h1>\n\n  <div class=\"form\">\n    <form id=\"new_request\" class=\"request-form\" data-form=\"\" data-form-type=\"request\" action=\"/hc/en-us/requests\" accept-charset=\"UTF-8\" method=\"post\"><input name=\"utf8\" type=\"hidden\" value=\"✓\"><input type=\"hidden\" name=\"authenticity_token\" value=\"\">\n\n\n\n\n  \n\n  \n\n  <div class=\"form-field string required request_anonymous_requester_email\"><label for=\"request_anonymous_requester_email\">Your email address</label>\n<input type=\"text\" name=\"request[anonymous_requester_email]\" id=\"request_anonymous_requester_email\" aria-required=\"true\">\n</div>\n\n  \n\n  \n    <div class=\"form-field string  required  request_subject\">\n      <label id=\"request_subject_label\" for=\"request_subject\">Subject</label>\n      <input type=\"text\" name=\"request[subject]\" id=\"request_subject\" maxlength=\"150\" size=\"150\" aria-required=\"true\" aria-labelledby=\"request_subject_label\">\n      \n      \n    </div>\n\n    \n      <div class=\"suggestion-list\" data-hc-class=\"searchbox\" data-hc-suggestion-list=\"true\"></div>\n    \n  \n    <div class=\"form-field text  required  request_description\">\n      <label id=\"request_description_label\" for=\"request_description\">Description</label>\n      <textarea name=\"request[description]\" id=\"request_description\" aria-required=\"true\" aria-describedby=\"request_description_hint\" aria-labelledby=\"request_description_label\"></textarea>\n      \n      <p id=\"request_description_hint\">Please enter the details of your request. A member of our support staff will respond as soon as possible.</p>\n    </div>\n\n    \n  \n\n  \n\n  <div class=\"form-field\">\n  <label for=\"request-attachments\">\n    Attachments\n  </label>\n  <div id=\"upload-dropzone\" class=\"upload-dropzone\">\n  <input type=\"file\" multiple=\"true\" id=\"request-attachments\" data-fileupload=\"true\" data-dropzone=\"upload-dropzone\" data-error=\"upload-error\" data-create-url=\"/hc/en-us/request_uploads\" data-name=\"request[attachments][]\" data-pool=\"request-attachments-pool\" data-delete-confirm-msg=\"\" aria-describedby=\"upload-error\">\n  <span>\n    <a>Add file</a> or drop files here\n  </span>\n</div>\n\n<div id=\"upload-error\" class=\"notification notification-error notification-inline\">\n  <span data-upload-error-message=\"\"></span>\n</div>\n\n\n  <ul id=\"request-attachments-pool\" class=\"upload-pool\" data-template=\"upload-template\"></ul>\n\n[JS_CODE_3]\n\n\n</div>\n\n\n  \n  \n\n  \n\n  <footer><input type=\"submit\" name=\"commit\" value=\"Submit\"></footer>\n\n</form>\n\n\n\n  </div>\n</div>\n\n  </main>\n\n  <footer class=\"footer\">\n  <div class=\"footer-inner\">\n    <a title=\"Home\" href=\"/hc/en-us\">Acadium Help Centre</a>\n\n    <div class=\"footer-language-selector\">\n      \n    </div>\n  </div>\n</footer>\n\n\n\n  <!-- / -->\n\n  \n  [JS_CODE_4]\n  [JS_CODE_5]\n\n  <script type=\"text/javascript\"></script>",
+          "_customCSS": "/* Type valid AMP CSS here */\n\ndiv {\n  padding: 80px 0;\n  color: #777;\n  text-align: center;\n}\np {\n  font-size: 60px;\n  color: #777;\n}",
+          "alias": "code-editor",
+          "_tags": [
+            "Extension"
+          ],
+          "_name": "pro.custom-html",
+          "_anchor": "custom-html-4",
+          "_PHPplaceholders": [],
+          "_JSplaceholders": [
+            "<script src=\"//static.zdassets.com/hc/assets/jquery-d5395f0b7ac5027403fc17855c46dbfc.js\"></script>",
+            "<script>\n(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){\n (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),\n m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)\n })(window,document,'script','//www.google-analytics.com/analytics.js','ga');\n\nga('create', 'UA-82056621-6', 'auto');\nga('send', 'pageview');\n\n</script>",
+            "<script type=\"text/javascript\" src=\"//p19.zdassets.com/hc/theming_assets/9329418/360002692693/script.js?digest=360423460354\"></script>",
+            "<script type=\"text/html\" id=\"upload-template\">\n<li class=\"upload-item\" data-upload-item>\n  <a class=\"upload-link\" target=\"_blank\" data-upload-link></a>\n  <p class=\"upload-path\" data-upload-path></p>\n  <p class=\"upload-path\" data-upload-size></p>\n  <p data-upload-issue class=\"notification notification-alert notification-inline\" aria-hidden=\"true\"></p>\n  <span class=\"upload-remove\" data-upload-remove></span>\n  <div class=\"upload-progress\" data-upload-progress></div>\n  <input type=\"hidden\">\n</li>\n</script>",
+            "<script src=\"//static.zdassets.com/hc/assets/en-us.0554632b4d415a8be9e4.js\"></script>",
+            "<script src=\"https://acadium.zendesk.com/auth/v2/host.js\" data-brand-id=\"360002692693\" data-return-to=\"https://support.acadium.com/hc/en-us/requests/new\" data-theme=\"hc\" data-locale=\"en-us\" data-auth-origin=\"360002692693,true,true\"></script>"
+          ]
+        }
+      ]
+    }
+  }
+}
