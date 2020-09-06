@@ -1,6 +1,6 @@
 {
   "settings": {
-    "currentPage": "home.html",
+    "currentPage": "index.html",
     "theme": {
       "name": "insightamp",
       "title": "InsightAMP",
@@ -57,11 +57,12 @@
     },
     "favicon": false,
     "canonical-url": false,
-    "robotsSwitcher": false,
-    "sitemapSwitcher": false,
-    "sitemapSwitcherAuto": false,
-    "siteUrl": false,
-    "gdpr": false
+    "robotsSwitcher": true,
+    "sitemapSwitcher": true,
+    "sitemapSwitcherAuto": "on",
+    "siteUrl": "https://acdium.com",
+    "gdpr": false,
+    "robotsText": "User-agent: *\nDisallow: /cgi-bin\n"
   },
   "pages": {
     "page1.html": {
@@ -241,11 +242,11 @@
         }
       ]
     },
-    "home.html": {
+    "index.html": {
       "settings": {
         "main": true,
         "title": "Home",
-        "meta_descr": "Gain new experiences, make new connections",
+        "meta_descr": "Gain new experiences, make new connections with the Acdium platform",
         "header_custom": "",
         "footer_custom": "",
         "html_before": ""
